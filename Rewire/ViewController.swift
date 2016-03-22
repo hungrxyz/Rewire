@@ -12,7 +12,9 @@ class ViewController: UIViewController {
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		// Do any additional setup after loading the view, typically from a nib.
+		
+		NSUserDefaults.standardUserDefaults().setValue(NSDate(), forKey: "startDate")
+		print(NSUserDefaults.standardUserDefaults().valueForKey("startDate"))
 	}
 
 	override func didReceiveMemoryWarning() {
