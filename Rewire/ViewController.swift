@@ -62,11 +62,11 @@ class ViewController: UIViewController {
 	func percentage(date: NSDate) {
 		let calendar = NSCalendar.currentCalendar()
 		let difference = calendar.components([.Day], fromDate: date, toDate: NSDate(), options: [])
-		dayLabel.text = "Day \(difference.day + 1) of 66"
+		dayLabel.text = (difference.day + 1).description
 		
 		let percentsFloat = (Float(difference.day + 1) / 66) * 100
 		
-		percentageLabel.text = "\(percentsFloat.description.substringToIndex(percentsFloat.description.startIndex.advancedBy(3)))% done"
+		percentageLabel.text = "\(percentsFloat.description.substringToIndex(percentsFloat.description.startIndex.advancedBy(3)))"
 	}
 }
 
