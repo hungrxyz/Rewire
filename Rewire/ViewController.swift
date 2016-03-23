@@ -10,41 +10,64 @@ import UIKit
 
 class ViewController: UIViewController {
 
+	@IBOutlet weak var habitNameLabel: UILabel!
+	@IBOutlet weak var dayLabel: UILabel!
+	@IBOutlet weak var percentageLabel: UILabel!
+	
+	var alert: UIAlertController?
+	
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
-		NSUserDefaults.standardUserDefaults().removeObjectForKey("startDate")
+		let userDefaults = NSUserDefaults.standardUserDefaults()
+//		userDefaults.removeObjectForKey("startDate")
+		
+		if let startDate = userDefaults.valueForKey("startDate") as? NSDate, habitName = userDefaults.valueForKey("habitName") as? String {
+			habitNameLabel.text = habitName
+			dayLabel.text = "\(startDate)"
+			percentage(startDate)
+		} else {
+			alert = UIAlertController(title: "✋", message: "No habit progress is being tracked,\nadd a new habit to start.", preferredStyle: .Alert)
+			
+			var habitTextField: UITextField!
+			alert!.addTextFieldWithConfigurationHandler({ (textField) in
+				textField.placeholder = "enter habit name"
+				habitTextField = textField
+			})
+			
+			alert!.addAction(UIAlertAction(title: "Done", style: .Default, handler: { (action) in
+				userDefaults.setValue(NSDate(), forKey: "startDate")
+				self.dayLabel.text = "\(NSDate())"
+				if habitTextField.text!.isEmpty {
+					userDefaults.setValue("Unknown Habit", forKey: "habitName")
+					self.habitNameLabel.text = "Unknown Habit"
+				} else {
+					userDefaults.setValue(habitTextField.text!, forKey: "habitName")
+					self.habitNameLabel.text = habitTextField.text!
+				}
+			}))
+			
+			alert!.addAction(UIAlertAction(title: "Cancel", style: .Cancel, handler: nil))
+		}
 	}
 
 	override func viewDidAppear(animated: Bool) {
 		super.viewDidAppear(animated)
 		
-		if let startDate = NSUserDefaults.standardUserDefaults().valueForKey("startDate") {
-			print(startDate)
-		} else {
-			let alert = UIAlertController(title: "✋", message: "No habit progress is being tracked,\nadd a new habit to start.", preferredStyle: .Alert)
-			
-			var habitTextField: UITextField!
-			alert.addTextFieldWithConfigurationHandler({ (textField) in
-				textField.placeholder = "enter habit name"
-				habitTextField = textField
-			})
-			
-			alert.addAction(UIAlertAction(title: "Done", style: .Default, handler: { (action) in
-				NSUserDefaults.standardUserDefaults().setValue(NSDate(), forKey: "startDate")
-				if habitTextField.text!.isEmpty {
-					self.title = "Habit Name"
-				} else {
-					self.title = habitTextField.text!
-				}
-			}))
-			
-			alert.addAction(UIAlertAction(title: "Cancel", style: .Cancel, handler: nil))
-			
+		if let alert = alert {
 			presentViewController(alert, animated: true, completion: nil)
 		}
 	}
-
-
+	
+	func percentage(date: NSDate) {
+		let calendar = NSCalendar.currentCalendar()
+		let difference = calendar.components([.Day], fromDate: date, toDate: NSDate(), options: [])
+		dayLabel.text = "Day \(difference.day + 1) of 66"
+		
+		let percentsFloat = (Float(difference.day + 1) / 66) * 100
+		
+		percentageLabel.text = "\(percentsFloat.description.substringToIndex(percentsFloat.description.startIndex.advancedBy(3)))% done"
+	}
 }
+
 

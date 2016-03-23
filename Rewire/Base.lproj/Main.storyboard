@@ -16,8 +16,41 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Day" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="32j-nm-45u">
+                                <rect key="frame" x="145" y="176" width="30" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Percentage" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kZu-jW-2cr">
+                                <rect key="frame" x="116" y="327" width="88" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Habit name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kyi-Zb-0wa">
+                                <rect key="frame" x="116" y="56" width="88" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="kyi-Zb-0wa" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7I7-Rh-2lD"/>
+                            <constraint firstItem="32j-nm-45u" firstAttribute="top" secondItem="kyi-Zb-0wa" secondAttribute="bottom" constant="99" id="Gf6-uZ-7VR"/>
+                            <constraint firstItem="kZu-jW-2cr" firstAttribute="top" secondItem="32j-nm-45u" secondAttribute="bottom" constant="130" id="JQ2-6G-rga"/>
+                            <constraint firstItem="kZu-jW-2cr" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Kcd-J2-qSX"/>
+                            <constraint firstItem="kyi-Zb-0wa" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="36" id="UOO-Ze-BYv"/>
+                            <constraint firstItem="32j-nm-45u" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fuX-3X-TP1"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="dayLabel" destination="32j-nm-45u" id="bfr-ac-9IB"/>
+                        <outlet property="habitNameLabel" destination="kyi-Zb-0wa" id="upP-DS-dBd"/>
+                        <outlet property="percentageLabel" destination="kZu-jW-2cr" id="q1u-d8-V1j"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
