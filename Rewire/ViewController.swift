@@ -12,6 +12,7 @@ class ViewController: UIViewController {
 
 	@IBOutlet weak var habitNameLabel: UILabel!
 	@IBOutlet weak var dayLabel: UILabel!
+	@IBOutlet weak var stageLabel: UILabel!
 	@IBOutlet weak var percentageLabel: UILabel!
 	
 	var alert: UIAlertController?
@@ -20,7 +21,7 @@ class ViewController: UIViewController {
 		super.viewDidLoad()
 		
 		let userDefaults = NSUserDefaults.standardUserDefaults()
-//		userDefaults.removeObjectForKey("startDate")
+
 		
 		if let startDate = userDefaults.valueForKey("startDate") as? NSDate, habitName = userDefaults.valueForKey("habitName") as? String {
 			habitNameLabel.text = habitName
@@ -63,10 +64,20 @@ class ViewController: UIViewController {
 		let calendar = NSCalendar.currentCalendar()
 		let difference = calendar.components([.Day], fromDate: date, toDate: NSDate(), options: [])
 		dayLabel.text = (difference.day + 1).description
+		switch difference.day + 1 {
+		case 1...22:
+			stageLabel.text = 1.description
+		case 23...44:
+			stageLabel.text = 2.description
+		case 45...66:
+			stageLabel.text = 3.description
+		default:
+			stageLabel.text = 4.description
+		}
 		
 		let percentsFloat = (Float(difference.day + 1) / 66) * 100
 		
-		percentageLabel.text = "\(percentsFloat.description.substringToIndex(percentsFloat.description.startIndex.advancedBy(3)))"
+		percentageLabel.text = "\(percentsFloat.description.substringToIndex(percentsFloat.description.startIndex.advancedBy(1)))"
 	}
 }
 
