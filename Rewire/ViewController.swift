@@ -20,9 +20,22 @@ class ViewController: UIViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
-		let userDefaults = NSUserDefaults.standardUserDefaults()
+	}
+	
+	override func viewWillAppear(animated: Bool) {
+		checkDate()
+	}
 
+	override func viewDidAppear(animated: Bool) {
+		super.viewDidAppear(animated)
 		
+		if let alert = alert {
+			presentViewController(alert, animated: true, completion: nil)
+		}
+	}
+	
+	func checkDate() {
+		let userDefaults = NSUserDefaults.standardUserDefaults()
 		if let startDate = userDefaults.valueForKey("startDate") as? NSDate, habitName = userDefaults.valueForKey("habitName") as? String {
 			habitNameLabel.text = habitName
 			dayLabel.text = "\(startDate)"
@@ -49,14 +62,6 @@ class ViewController: UIViewController {
 			}))
 			
 			alert!.addAction(UIAlertAction(title: "Cancel", style: .Cancel, handler: nil))
-		}
-	}
-
-	override func viewDidAppear(animated: Bool) {
-		super.viewDidAppear(animated)
-		
-		if let alert = alert {
-			presentViewController(alert, animated: true, completion: nil)
 		}
 	}
 	
