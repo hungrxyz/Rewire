@@ -20,10 +20,9 @@ class ViewController: UIViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
-	}
-	
-	override func viewWillAppear(animated: Bool) {
 		checkDate()
+		
+		NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(didBecomeActive), name: UIApplicationDidBecomeActiveNotification, object: nil)
 	}
 
 	override func viewDidAppear(animated: Bool) {
@@ -38,7 +37,6 @@ class ViewController: UIViewController {
 		let userDefaults = NSUserDefaults.standardUserDefaults()
 		if let startDate = userDefaults.valueForKey("startDate") as? NSDate, habitName = userDefaults.valueForKey("habitName") as? String {
 			habitNameLabel.text = habitName
-			dayLabel.text = "\(startDate)"
 			percentage(startDate)
 		} else {
 			alert = UIAlertController(title: "✋", message: "No habit progress is being tracked,\nadd a new habit to start.", preferredStyle: .Alert)
@@ -83,6 +81,10 @@ class ViewController: UIViewController {
 		let percentsFloat = (Float(difference.day + 1) / 66) * 100
 		
 		percentageLabel.text = "\(percentsFloat.description.substringToIndex(percentsFloat.description.startIndex.advancedBy(1)))"
+	}
+	
+	func didBecomeActive() {
+		checkDate()
 	}
 }
 
