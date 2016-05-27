@@ -7,11 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9F347DB05D9CC6CA8030C76F /* Pods_RewireTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 838E07881E826B170FCCD7A7 /* Pods_RewireTests.framework */; };
+		C8AC23E7D69CAF15B5DDE074 /* Pods_Rewire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B41C5F6ED5362284218E63DE /* Pods_Rewire.framework */; };
 		FA2FE4311CF6881100324B00 /* RewireTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2FE4301CF6881100324B00 /* RewireTests.swift */; };
+		FA9530931CF8F40D00BA6771 /* NewHabitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9530921CF8F40D00BA6771 /* NewHabitViewController.swift */; };
 		FAE28EE51CA2017800E88D38 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE28EE41CA2017800E88D38 /* AppDelegate.swift */; };
-		FAE28EE71CA2017800E88D38 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE28EE61CA2017800E88D38 /* ViewController.swift */; };
 		FAE28EEA1CA2017800E88D38 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAE28EE81CA2017800E88D38 /* Main.storyboard */; };
-		FAE28EED1CA2017800E88D38 /* Rewire.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FAE28EEB1CA2017800E88D38 /* Rewire.xcdatamodeld */; };
 		FAE28EEF1CA2017800E88D38 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAE28EEE1CA2017800E88D38 /* Assets.xcassets */; };
 		FAE28EF21CA2017800E88D38 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAE28EF01CA2017800E88D38 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
@@ -27,14 +28,19 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7EB8D5F618163DD888279FE5 /* Pods-Rewire.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rewire.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Rewire/Pods-Rewire.debug.xcconfig"; sourceTree = "<group>"; };
+		838E07881E826B170FCCD7A7 /* Pods_RewireTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RewireTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8403AF944724422CF95D9C72 /* Pods-RewireTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RewireTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RewireTests/Pods-RewireTests.release.xcconfig"; sourceTree = "<group>"; };
+		B41C5F6ED5362284218E63DE /* Pods_Rewire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Rewire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CAB46FD09DE61874350DFF8B /* Pods-Rewire.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rewire.release.xcconfig"; path = "Pods/Target Support Files/Pods-Rewire/Pods-Rewire.release.xcconfig"; sourceTree = "<group>"; };
+		D1258A4F5E61D2C2A4A1B490 /* Pods-RewireTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RewireTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RewireTests/Pods-RewireTests.debug.xcconfig"; sourceTree = "<group>"; };
 		FA2FE42E1CF6881100324B00 /* RewireTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RewireTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA2FE4301CF6881100324B00 /* RewireTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewireTests.swift; sourceTree = "<group>"; };
 		FA2FE4321CF6881100324B00 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FA9530921CF8F40D00BA6771 /* NewHabitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewHabitViewController.swift; sourceTree = "<group>"; };
 		FAE28EE11CA2017800E88D38 /* Rewire.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rewire.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAE28EE41CA2017800E88D38 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FAE28EE61CA2017800E88D38 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		FAE28EE91CA2017800E88D38 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		FAE28EEC1CA2017800E88D38 /* Rewire.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Rewire.xcdatamodel; sourceTree = "<group>"; };
 		FAE28EEE1CA2017800E88D38 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FAE28EF11CA2017800E88D38 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FAE28EF31CA2017800E88D38 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -45,6 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F347DB05D9CC6CA8030C76F /* Pods_RewireTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,12 +59,33 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C8AC23E7D69CAF15B5DDE074 /* Pods_Rewire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3E323B37934C56227FD644B5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B41C5F6ED5362284218E63DE /* Pods_Rewire.framework */,
+				838E07881E826B170FCCD7A7 /* Pods_RewireTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A78905883D5C73DCD474D765 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7EB8D5F618163DD888279FE5 /* Pods-Rewire.debug.xcconfig */,
+				CAB46FD09DE61874350DFF8B /* Pods-Rewire.release.xcconfig */,
+				D1258A4F5E61D2C2A4A1B490 /* Pods-RewireTests.debug.xcconfig */,
+				8403AF944724422CF95D9C72 /* Pods-RewireTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		FA2FE42F1CF6881100324B00 /* RewireTests */ = {
 			isa = PBXGroup;
 			children = (
@@ -73,6 +101,8 @@
 				FAE28EE31CA2017800E88D38 /* Rewire */,
 				FA2FE42F1CF6881100324B00 /* RewireTests */,
 				FAE28EE21CA2017800E88D38 /* Products */,
+				A78905883D5C73DCD474D765 /* Pods */,
+				3E323B37934C56227FD644B5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -89,12 +119,11 @@
 			isa = PBXGroup;
 			children = (
 				FAE28EE41CA2017800E88D38 /* AppDelegate.swift */,
-				FAE28EE61CA2017800E88D38 /* ViewController.swift */,
 				FAE28EE81CA2017800E88D38 /* Main.storyboard */,
+				FA9530921CF8F40D00BA6771 /* NewHabitViewController.swift */,
 				FAE28EEE1CA2017800E88D38 /* Assets.xcassets */,
 				FAE28EF01CA2017800E88D38 /* LaunchScreen.storyboard */,
 				FAE28EF31CA2017800E88D38 /* Info.plist */,
-				FAE28EEB1CA2017800E88D38 /* Rewire.xcdatamodeld */,
 			);
 			path = Rewire;
 			sourceTree = "<group>";
@@ -106,9 +135,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FA2FE4351CF6881100324B00 /* Build configuration list for PBXNativeTarget "RewireTests" */;
 			buildPhases = (
+				7EE231DB695EA512873BDF03 /* 📦 Check Pods Manifest.lock */,
 				FA2FE42A1CF6881100324B00 /* Sources */,
 				FA2FE42B1CF6881100324B00 /* Frameworks */,
 				FA2FE42C1CF6881100324B00 /* Resources */,
+				8DDC04E2A47EE10629F9F420 /* 📦 Embed Pods Frameworks */,
+				3BE99E19F60012721DEC807E /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -124,9 +156,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FAE28EF61CA2017900E88D38 /* Build configuration list for PBXNativeTarget "Rewire" */;
 			buildPhases = (
+				3D5DC55311238481CF3506E6 /* 📦 Check Pods Manifest.lock */,
 				FAE28EDD1CA2017800E88D38 /* Sources */,
 				FAE28EDE1CA2017800E88D38 /* Frameworks */,
 				FAE28EDF1CA2017800E88D38 /* Resources */,
+				3F4271D1ED6B4E6C7606889F /* 📦 Embed Pods Frameworks */,
+				9CFE30D097312CC7B7BC5EB5 /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -195,6 +230,99 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3BE99E19F60012721DEC807E /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RewireTests/Pods-RewireTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3D5DC55311238481CF3506E6 /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		3F4271D1ED6B4E6C7606889F /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Rewire/Pods-Rewire-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7EE231DB695EA512873BDF03 /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		8DDC04E2A47EE10629F9F420 /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RewireTests/Pods-RewireTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9CFE30D097312CC7B7BC5EB5 /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Rewire/Pods-Rewire-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		FA2FE42A1CF6881100324B00 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -208,8 +336,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FAE28EE71CA2017800E88D38 /* ViewController.swift in Sources */,
-				FAE28EED1CA2017800E88D38 /* Rewire.xcdatamodeld in Sources */,
+				FA9530931CF8F40D00BA6771 /* NewHabitViewController.swift in Sources */,
 				FAE28EE51CA2017800E88D38 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -246,6 +373,7 @@
 /* Begin XCBuildConfiguration section */
 		FA2FE4361CF6881100324B00 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D1258A4F5E61D2C2A4A1B490 /* Pods-RewireTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = RewireTests/Info.plist;
@@ -258,6 +386,7 @@
 		};
 		FA2FE4371CF6881100324B00 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8403AF944724422CF95D9C72 /* Pods-RewireTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = RewireTests/Info.plist;
@@ -353,6 +482,7 @@
 		};
 		FAE28EF71CA2017900E88D38 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7EB8D5F618163DD888279FE5 /* Pods-Rewire.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Rewire/Info.plist;
@@ -364,6 +494,7 @@
 		};
 		FAE28EF81CA2017900E88D38 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CAB46FD09DE61874350DFF8B /* Pods-Rewire.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Rewire/Info.plist;
@@ -383,6 +514,7 @@
 				FA2FE4371CF6881100324B00 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FAE28EDC1CA2017800E88D38 /* Build configuration list for PBXProject "Rewire" */ = {
 			isa = XCConfigurationList;
@@ -403,19 +535,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		FAE28EEB1CA2017800E88D38 /* Rewire.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				FAE28EEC1CA2017800E88D38 /* Rewire.xcdatamodel */,
-			);
-			currentVersion = FAE28EEC1CA2017800E88D38 /* Rewire.xcdatamodel */;
-			path = Rewire.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = FAE28ED91CA2017800E88D38 /* Project object */;
 }
