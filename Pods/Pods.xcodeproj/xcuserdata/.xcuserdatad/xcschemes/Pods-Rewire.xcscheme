@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '1D5F56A144764EC8AA96F47B01B4FED5'
+               BlueprintIdentifier = '7F16EE16721F5245EE32659F2E076CB5'
                BlueprintName = 'Pods-Rewire'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'Pods-Rewire.framework'>

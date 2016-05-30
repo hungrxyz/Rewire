@@ -9,10 +9,11 @@
 /* Begin PBXBuildFile section */
 		9F347DB05D9CC6CA8030C76F /* Pods_RewireTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 838E07881E826B170FCCD7A7 /* Pods_RewireTests.framework */; };
 		C8AC23E7D69CAF15B5DDE074 /* Pods_Rewire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B41C5F6ED5362284218E63DE /* Pods_Rewire.framework */; };
-		FA2FE4311CF6881100324B00 /* RewireTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2FE4301CF6881100324B00 /* RewireTests.swift */; };
+		FA9382D21CFB7AD600F6357D /* NewHabitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9382D11CFB7AD600F6357D /* NewHabitTests.swift */; };
+		FA9382D41CFB7B6E00F6357D /* NewHabit.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA9382D31CFB7B6E00F6357D /* NewHabit.storyboard */; };
+		FA9382D81CFBA02600F6357D /* RealmHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9382D71CFBA02600F6357D /* RealmHandler.swift */; };
 		FA9530931CF8F40D00BA6771 /* NewHabitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9530921CF8F40D00BA6771 /* NewHabitViewController.swift */; };
 		FAE28EE51CA2017800E88D38 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE28EE41CA2017800E88D38 /* AppDelegate.swift */; };
-		FAE28EEA1CA2017800E88D38 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAE28EE81CA2017800E88D38 /* Main.storyboard */; };
 		FAE28EEF1CA2017800E88D38 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAE28EEE1CA2017800E88D38 /* Assets.xcassets */; };
 		FAE28EF21CA2017800E88D38 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAE28EF01CA2017800E88D38 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
@@ -35,12 +36,14 @@
 		CAB46FD09DE61874350DFF8B /* Pods-Rewire.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rewire.release.xcconfig"; path = "Pods/Target Support Files/Pods-Rewire/Pods-Rewire.release.xcconfig"; sourceTree = "<group>"; };
 		D1258A4F5E61D2C2A4A1B490 /* Pods-RewireTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RewireTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RewireTests/Pods-RewireTests.debug.xcconfig"; sourceTree = "<group>"; };
 		FA2FE42E1CF6881100324B00 /* RewireTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RewireTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		FA2FE4301CF6881100324B00 /* RewireTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewireTests.swift; sourceTree = "<group>"; };
 		FA2FE4321CF6881100324B00 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FA9382D11CFB7AD600F6357D /* NewHabitTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewHabitTests.swift; sourceTree = "<group>"; };
+		FA9382D31CFB7B6E00F6357D /* NewHabit.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = NewHabit.storyboard; sourceTree = "<group>"; };
+		FA9382D71CFBA02600F6357D /* RealmHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmHandler.swift; sourceTree = "<group>"; };
+		FA9382DA1CFBBC2C00F6357D /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = "Pods/../build/Debug-iphoneos/RealmSwift/RealmSwift.framework"; sourceTree = "<group>"; };
 		FA9530921CF8F40D00BA6771 /* NewHabitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewHabitViewController.swift; sourceTree = "<group>"; };
 		FAE28EE11CA2017800E88D38 /* Rewire.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rewire.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAE28EE41CA2017800E88D38 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FAE28EE91CA2017800E88D38 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FAE28EEE1CA2017800E88D38 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FAE28EF11CA2017800E88D38 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FAE28EF31CA2017800E88D38 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -69,6 +72,7 @@
 		3E323B37934C56227FD644B5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FA9382DA1CFBBC2C00F6357D /* RealmSwift.framework */,
 				B41C5F6ED5362284218E63DE /* Pods_Rewire.framework */,
 				838E07881E826B170FCCD7A7 /* Pods_RewireTests.framework */,
 			);
@@ -89,16 +93,46 @@
 		FA2FE42F1CF6881100324B00 /* RewireTests */ = {
 			isa = PBXGroup;
 			children = (
-				FA2FE4301CF6881100324B00 /* RewireTests.swift */,
+				FA9382D11CFB7AD600F6357D /* NewHabitTests.swift */,
 				FA2FE4321CF6881100324B00 /* Info.plist */,
 			);
 			path = RewireTests;
+			sourceTree = "<group>";
+		};
+		FA9382D51CFB7C8700F6357D /* New Habit */ = {
+			isa = PBXGroup;
+			children = (
+				FA9382D31CFB7B6E00F6357D /* NewHabit.storyboard */,
+				FA9530921CF8F40D00BA6771 /* NewHabitViewController.swift */,
+			);
+			name = "New Habit";
+			sourceTree = "<group>";
+		};
+		FA9382D61CFB7C8F00F6357D /* Underground */ = {
+			isa = PBXGroup;
+			children = (
+				FAE28EEE1CA2017800E88D38 /* Assets.xcassets */,
+				FAE28EF01CA2017800E88D38 /* LaunchScreen.storyboard */,
+				FAE28EF31CA2017800E88D38 /* Info.plist */,
+				FAE28EE41CA2017800E88D38 /* AppDelegate.swift */,
+			);
+			name = Underground;
+			sourceTree = "<group>";
+		};
+		FA9382D91CFBA05900F6357D /* Realm */ = {
+			isa = PBXGroup;
+			children = (
+				FA9382D71CFBA02600F6357D /* RealmHandler.swift */,
+			);
+			name = Realm;
+			path = Rewire;
 			sourceTree = "<group>";
 		};
 		FAE28ED81CA2017800E88D38 = {
 			isa = PBXGroup;
 			children = (
 				FAE28EE31CA2017800E88D38 /* Rewire */,
+				FA9382D91CFBA05900F6357D /* Realm */,
 				FA2FE42F1CF6881100324B00 /* RewireTests */,
 				FAE28EE21CA2017800E88D38 /* Products */,
 				A78905883D5C73DCD474D765 /* Pods */,
@@ -118,12 +152,8 @@
 		FAE28EE31CA2017800E88D38 /* Rewire */ = {
 			isa = PBXGroup;
 			children = (
-				FAE28EE41CA2017800E88D38 /* AppDelegate.swift */,
-				FAE28EE81CA2017800E88D38 /* Main.storyboard */,
-				FA9530921CF8F40D00BA6771 /* NewHabitViewController.swift */,
-				FAE28EEE1CA2017800E88D38 /* Assets.xcassets */,
-				FAE28EF01CA2017800E88D38 /* LaunchScreen.storyboard */,
-				FAE28EF31CA2017800E88D38 /* Info.plist */,
+				FA9382D61CFB7C8F00F6357D /* Underground */,
+				FA9382D51CFB7C8700F6357D /* New Habit */,
 			);
 			path = Rewire;
 			sourceTree = "<group>";
@@ -222,9 +252,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA9382D41CFB7B6E00F6357D /* NewHabit.storyboard in Resources */,
 				FAE28EF21CA2017800E88D38 /* LaunchScreen.storyboard in Resources */,
 				FAE28EEF1CA2017800E88D38 /* Assets.xcassets in Resources */,
-				FAE28EEA1CA2017800E88D38 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -328,7 +358,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FA2FE4311CF6881100324B00 /* RewireTests.swift in Sources */,
+				FA9382D21CFB7AD600F6357D /* NewHabitTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -336,6 +366,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA9382D81CFBA02600F6357D /* RealmHandler.swift in Sources */,
 				FA9530931CF8F40D00BA6771 /* NewHabitViewController.swift in Sources */,
 				FAE28EE51CA2017800E88D38 /* AppDelegate.swift in Sources */,
 			);
@@ -352,14 +383,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		FAE28EE81CA2017800E88D38 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				FAE28EE91CA2017800E88D38 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		FAE28EF01CA2017800E88D38 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -376,10 +399,16 @@
 			baseConfigurationReference = D1258A4F5E61D2C2A4A1B490 /* Pods-RewireTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(PROJECT_DIR)",
+					"$(inherited)",
+				);
 				INFOPLIST_FILE = RewireTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.zzzel.RewireTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Rewire.app/Rewire";
 			};
 			name = Debug;
@@ -389,6 +418,11 @@
 			baseConfigurationReference = 8403AF944724422CF95D9C72 /* Pods-RewireTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(PROJECT_DIR)",
+					"$(inherited)",
+				);
 				INFOPLIST_FILE = RewireTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.zzzel.RewireTests;
