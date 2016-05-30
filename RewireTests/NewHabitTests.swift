@@ -72,23 +72,12 @@ class NewHabitTests: XCTestCase {
 		XCTAssertEqual(newHabit.name, "New Habit Name", "Name of saved habit should be \"New Habit Name\"")
 	}
 	
-	func test_TwitterAccountAccessRequested() {
+	func test_LinkTwitterAccountSwitch_ChecksForAccounts() {
+		newHabitViewController.linkTwitterAccountSwitch.on = true
+		newHabitViewController.linkTwitterAccountSwitchValueChanged(newHabitViewController)
 		
-		let mockTwitterAPI = MockTwitterAPI()
-		let twitterHandler = TwitterHandler(api: mockTwitterAPI)
-		
-		twitterHandler.whatever()
-		
-		XCTAssertTrue(mockTwitterAPI.accessGranted)
 		
 	}
-
+		
 }
 
-class MockTwitterAPI: API {
-	var accessGranted = false
-	
-	func requestTwitterAccountAccess() {
-		accessGranted = true
-	}
-}
