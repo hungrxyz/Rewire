@@ -7,7 +7,6 @@
 //
 
 import XCTest
-import MBProgressHUD
 @testable import Rewire
 
 class NewHabitTests: XCTestCase {
@@ -21,7 +20,9 @@ class NewHabitTests: XCTestCase {
 		
 		_ = newHabitViewController.view
 		
-		
+		try! RealmProvider.realm().write {
+			RealmProvider.realm().deleteAll()
+		}
 	}
 	
 	override func tearDown() {
@@ -41,22 +42,53 @@ class NewHabitTests: XCTestCase {
 		XCTAssert(newHabitViewController.startNewHabitButton.enabled == false, "Start New Habit button shouldn't be enabled")
 	}
 	
-	func testIfProgressHUDIsShown() {
-		newHabitViewController.startNewHabitButton.enabled = true
-		newHabitViewController.startNewHabitButtonTapped(newHabitViewController)
-		
-		XCTAssertTrue(newHabitViewController.view.subviews.contains { $0.isKindOfClass(MBProgressHUD) },
-		              "MBProgressHUD is not one of views subvies")
-	}
-	
 	func textFieldTextDidChange() {
 		newHabitViewController.textField(newHabitViewController.newHabitNameTextField, shouldChangeCharactersInRange: NSRange(), replacementString: "")
-	}
+	}	
 	
 	func testSwitchesAreFunctional() {
+		newHabitViewController.linkTwitterAccountSwitch.on = true
+		newHabitViewController.notificationsSwitch.on = true
+		newHabitViewController.useTo_dayDataSwitch.on = true
+		newHabitViewController.useWorkHDataSwitch.on = true
+		
 		newHabitViewController.startNewHabitButton.enabled = true
 		newHabitViewController.startNewHabitButtonTapped(newHabitViewController)
 		
+		let newHabit = RealmProvider.realm().objects(Habit).first!
+		XCTAssert(newHabit.linkTwitterAccount, "Link Twitter account should be true")
+		XCTAssert(newHabit.notifications, "Notifications should be true")
+		XCTAssert(newHabit.useTo_dayData, "Use To-day Data sohuld be true")
+		XCTAssert(newHabit.useWorkHData, "Use WorkH Data should be true")
+	}
+	
+	func testCorrectHabitNameSaved() {
+		newHabitViewController.newHabitNameTextField.text = "New Habit Name"
 		
+		newHabitViewController.startNewHabitButton.enabled = true
+		newHabitViewController.startNewHabitButtonTapped(newHabitViewController)
+		
+		let newHabit = RealmProvider.realm().objects(Habit).first!
+		XCTAssertEqual(newHabit.name, "New Habit Name", "Name of saved habit should be \"New Habit Name\"")
+	}
+	
+	func test_TwitterAccountAccessRequested() {
+		
+		let mockTwitterAPI = MockTwitterAPI()
+		let twitterHandler = TwitterHandler(api: mockTwitterAPI)
+		
+		twitterHandler.whatever()
+		
+		XCTAssertTrue(mockTwitterAPI.accessGranted)
+		
+	}
+
+}
+
+class MockTwitterAPI: API {
+	var accessGranted = false
+	
+	func requestTwitterAccountAccess() {
+		accessGranted = true
 	}
 }

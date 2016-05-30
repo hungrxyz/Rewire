@@ -26,7 +26,23 @@ class NewHabitViewController: UIViewController {
 	}
 	
 	@IBAction func startNewHabitButtonTapped(sender: AnyObject) {
-		MBProgressHUD.showHUDAddedTo(view, animated: true)
+		let newHabit = Habit()
+		newHabit.name = newHabitNameTextField.text!
+		newHabit.linkTwitterAccount = linkTwitterAccountSwitch.on
+		newHabit.notifications = notificationsSwitch.on
+		newHabit.useTo_dayData = useTo_dayDataSwitch.on
+		newHabit.useWorkHData = useWorkHDataSwitch.on
+		
+		RealmHandler.sharedInstance.addNewHabit(newHabit)
+	}
+	
+	@IBAction func linkTwitterAccountSwitchValueChanged(sender: AnyObject) {
+	}
+	@IBAction func useTo_dayDataSwitchValueChanged(sender: AnyObject) {
+	}
+	@IBAction func useWorkHDataSwitchValueChanged(sender: AnyObject) {
+	}
+	@IBAction func notificationsSwitchValueChanged(sender: AnyObject) {
 	}
 }
 

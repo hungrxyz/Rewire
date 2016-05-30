@@ -12,6 +12,7 @@ end
 
 target 'RewireTests' do
 
+pod 'RealmSwift'
 pod 'MBProgressHUD'
 
 end

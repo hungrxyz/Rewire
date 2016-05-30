@@ -76,6 +76,9 @@
                                                                 </label>
                                                                 <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="eWs-gS-pSJ">
                                                                     <rect key="frame" x="211" y="0.0" width="51" height="31"/>
+                                                                    <connections>
+                                                                        <action selector="linkTwitterAccountSwitchValueChanged:" destination="39X-vJ-uP2" eventType="valueChanged" id="qyL-7V-s9a"/>
+                                                                    </connections>
                                                                 </switch>
                                                             </subviews>
                                                         </stackView>
@@ -90,6 +93,9 @@
                                                                 </label>
                                                                 <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="khv-fy-fM0">
                                                                     <rect key="frame" x="211" y="0.0" width="51" height="31"/>
+                                                                    <connections>
+                                                                        <action selector="useTo_dayDataSwitchValueChanged:" destination="39X-vJ-uP2" eventType="valueChanged" id="Jfy-aY-wBz"/>
+                                                                    </connections>
                                                                 </switch>
                                                             </subviews>
                                                         </stackView>
@@ -104,6 +110,9 @@
                                                                 </label>
                                                                 <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="wRa-1y-mhu">
                                                                     <rect key="frame" x="211" y="0.0" width="51" height="31"/>
+                                                                    <connections>
+                                                                        <action selector="useWorkHDataSwitchValueChanged:" destination="39X-vJ-uP2" eventType="valueChanged" id="SBl-FX-gjv"/>
+                                                                    </connections>
                                                                 </switch>
                                                             </subviews>
                                                         </stackView>
@@ -118,6 +127,9 @@
                                                                 </label>
                                                                 <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="2jE-PL-ubM">
                                                                     <rect key="frame" x="211" y="0.0" width="51" height="31"/>
+                                                                    <connections>
+                                                                        <action selector="notificationsSwitchValueChanged:" destination="39X-vJ-uP2" eventType="valueChanged" id="lhs-JS-yIn"/>
+                                                                    </connections>
                                                                 </switch>
                                                             </subviews>
                                                         </stackView>
