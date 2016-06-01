@@ -12,21 +12,6 @@ import Accounts
 
 class TwitterTests: XCTestCase {
 	
-	class MockTwitterAPI: API {
-		var accessChecked = false
-		var accountsChecked = false
-		
-		func requestAccessToAccounts() -> Bool {
-			accessChecked = true
-			return false
-		}
-		
-		func getAccounts() -> [ACAccount]? {
-			accountsChecked = true
-			return nil
-		}
-	}
-	
 	var mockTwitterAPI: MockTwitterAPI!
 	var twitterHandler: TwitterHandler!
 	
@@ -43,15 +28,33 @@ class TwitterTests: XCTestCase {
 	}
 	
 	func test_TwitterAccountAccessRequested() {
-		twitterHandler.getAccess()
+		twitterHandler.setup()
 		
 		XCTAssertTrue(mockTwitterAPI.accessChecked, "Access has not been checked")
-	}
-	
-	func test_TwitterAccountAvailable() {
-		twitterHandler.requestAccounts()
-		
 		XCTAssertTrue(mockTwitterAPI.accountsChecked, "Accounts were not checked")
 	}
 	
+	func test_TwitterAccount_returned() {
+		let account = twitterHandler.setup()
+		
+		XCTAssertNotNil(account, "No account was returned")
+	}
+	
+}
+
+class MockTwitterAPI: API {
+	var accessChecked = false
+	var accountsChecked = false
+	
+	func requestAccessToAccounts() -> Bool {
+		accessChecked = true
+		return true
+	}
+	
+	func getAccounts() -> [ACAccount]? {
+		accountsChecked = true
+		let mockAccount = ACAccount()
+		mockAccount.username = "mockAccount"
+		return [mockAccount]
+	}
 }

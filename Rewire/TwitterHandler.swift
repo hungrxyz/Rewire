@@ -9,51 +9,23 @@
 import Foundation
 import Accounts
 
-protocol API {
-	
-	func requestAccessToAccounts() -> Bool
-	func getAccounts() -> [ACAccount]?
-}
-
-class TwitterAPI: API {
-	
-	let accountStore = ACAccountStore()
-	var accountType: ACAccountType
-	
-	init() {
-		accountType = accountStore.accountTypeWithAccountTypeIdentifier(ACAccountTypeIdentifierTwitter)
-	}
-	
-	func requestAccessToAccounts() -> Bool {
-		accountStore.requestAccessToAccountsWithType(accountType, options: nil) { success, error in
-			return success
-		}
-		return false
-	}
-	
-	func getAccounts() -> [ACAccount]? {
-		return accountStore.accountsWithAccountType(accountType) as? [ACAccount]
-	}
-}
-
-class TwitterHandler: TwitterAPI {
+class TwitterHandler {
 	let api: API
 	
-	init(api: API) {
+	init(api: API = TwitterAPI()) {
 		self.api = api
 	}
 	
-	func getAccess() -> Bool? {
+	func setup() -> String? {
 		if api.requestAccessToAccounts() {
-			requestAccounts()
+			if let accounts = api.getAccounts() {
+				return processAccounts(accounts)
+			}
 		}
 		return nil
 	}
 	
-	func requestAccounts() {
-		if let accounts = api.getAccounts() {
-			print(accounts)
-		}
+	func processAccounts(accounts: [ACAccount]) -> String {
+		return accounts.first!.username
 	}
-	
 }

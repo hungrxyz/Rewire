@@ -19,8 +19,14 @@ class NewHabitViewController: UIViewController {
 	@IBOutlet weak var useWorkHDataSwitch: UISwitch!
 	@IBOutlet weak var startNewHabitButton: UIButton!
 	
+	var twitterHandler: TwitterHandler!
+	
+	var twitterAccountId: String?
+	
 	override func viewDidLoad() {
 		super.viewDidLoad()
+		
+		twitterHandler = TwitterHandler()
 		
 		view.backgroundColor = UIColor(patternImage: UIImage(named: "AppIcon60x60")!)
 	}
@@ -28,32 +34,41 @@ class NewHabitViewController: UIViewController {
 	@IBAction func startNewHabitButtonTapped(sender: AnyObject) {
 		let newHabit = Habit()
 		newHabit.name = newHabitNameTextField.text!
-		newHabit.linkTwitterAccount = linkTwitterAccountSwitch.on
-		newHabit.notifications = notificationsSwitch.on
-		newHabit.useTo_dayData = useTo_dayDataSwitch.on
-		newHabit.useWorkHData = useWorkHDataSwitch.on
 		
 		RealmHandler.sharedInstance.addNewHabit(newHabit)
 	}
 	
-	@IBAction func linkTwitterAccountSwitchValueChanged(sender: AnyObject) {
+	@IBAction func linkTwitterAccountSwitchValueChanged(sender: UISwitch) {
+		twitterAccountId = twitterHandler.setup()
 	}
+	
 	@IBAction func useTo_dayDataSwitchValueChanged(sender: AnyObject) {
+		
 	}
+	
 	@IBAction func useWorkHDataSwitchValueChanged(sender: AnyObject) {
+		
 	}
+	
 	@IBAction func notificationsSwitchValueChanged(sender: AnyObject) {
+		
+	}
+	
+	@IBAction func habitNameTextFieldEditingChanged(textField: UITextField) {
+		if textField.text == "Habit Name" || textField.text == "" {
+			print(textField.text)
+			startNewHabitButton.enabled = false
+			startNewHabitButton.alpha = 0.5
+		} else {
+			startNewHabitButton.enabled = true
+			startNewHabitButton.alpha = 1
+		}
 	}
 }
 
 extension NewHabitViewController: UITextFieldDelegate {
 	
 	func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool {
-		if textField.text == "Habit Name" || textField.text == "" {
-			startNewHabitButton.enabled = false
-		} else {
-			startNewHabitButton.enabled = true
-		}
 		return true
 	}
 }

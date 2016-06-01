@@ -30,7 +30,7 @@ class NewHabitTests: XCTestCase {
 		super.tearDown()
 	}
 	
-	func testIfButtonEnabledCorrectly() {
+	func test_startButton_enabledAccordingly() {
 		XCTAssert(newHabitViewController.startNewHabitButton.enabled == false, "Start New Habit button shouldn't be enabled")
 		
 		newHabitViewController.newHabitNameTextField.text = "New habit name"
@@ -42,27 +42,8 @@ class NewHabitTests: XCTestCase {
 		XCTAssert(newHabitViewController.startNewHabitButton.enabled == false, "Start New Habit button shouldn't be enabled")
 	}
 	
-	func textFieldTextDidChange() {
-		newHabitViewController.textField(newHabitViewController.newHabitNameTextField, shouldChangeCharactersInRange: NSRange(), replacementString: "")
-	}	
 	
-	func testSwitchesAreFunctional() {
-		newHabitViewController.linkTwitterAccountSwitch.on = true
-		newHabitViewController.notificationsSwitch.on = true
-		newHabitViewController.useTo_dayDataSwitch.on = true
-		newHabitViewController.useWorkHDataSwitch.on = true
-		
-		newHabitViewController.startNewHabitButton.enabled = true
-		newHabitViewController.startNewHabitButtonTapped(newHabitViewController)
-		
-		let newHabit = RealmProvider.realm().objects(Habit).first!
-		XCTAssert(newHabit.linkTwitterAccount, "Link Twitter account should be true")
-		XCTAssert(newHabit.notifications, "Notifications should be true")
-		XCTAssert(newHabit.useTo_dayData, "Use To-day Data sohuld be true")
-		XCTAssert(newHabit.useWorkHData, "Use WorkH Data should be true")
-	}
-	
-	func testCorrectHabitNameSaved() {
+	func test_correctHabitName_saved() {
 		newHabitViewController.newHabitNameTextField.text = "New Habit Name"
 		
 		newHabitViewController.startNewHabitButton.enabled = true
@@ -72,12 +53,18 @@ class NewHabitTests: XCTestCase {
 		XCTAssertEqual(newHabit.name, "New Habit Name", "Name of saved habit should be \"New Habit Name\"")
 	}
 	
-	func test_LinkTwitterAccountSwitch_ChecksForAccounts() {
+	func test_linkTwitterAccountSwitch_requestsAccess() {
+		let mockAPI = MockTwitterAPI()
+		newHabitViewController.twitterHandler = TwitterHandler(api: mockAPI)
+		
 		newHabitViewController.linkTwitterAccountSwitch.on = true
-		newHabitViewController.linkTwitterAccountSwitchValueChanged(newHabitViewController)
+		newHabitViewController.linkTwitterAccountSwitchValueChanged(newHabitViewController.linkTwitterAccountSwitch)
 		
-		
+		XCTAssertTrue(mockAPI.accessChecked, "Access for Twitter account has not been requested")
 	}
-		
+	
+	private func textFieldTextDidChange() {
+		newHabitViewController.habitNameTextFieldEditingChanged(newHabitViewController.newHabitNameTextField)
+	}
 }
 
