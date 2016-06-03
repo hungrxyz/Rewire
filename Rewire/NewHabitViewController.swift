@@ -39,11 +39,20 @@ class NewHabitViewController: UIViewController {
 	}
 	
 	@IBAction func linkTwitterAccountSwitchValueChanged(sender: UISwitch) {
-		twitterAccountId = twitterHandler.setup()
+		if sender.on {
+			twitterHandler.setup { accountId in
+				self.twitterAccountId = accountId
+				if accountId == nil {
+					dispatch_async(dispatch_get_main_queue()) {
+						sender.on = false
+					}
+				}
+			}
+		}
 	}
 	
 	@IBAction func useTo_dayDataSwitchValueChanged(sender: AnyObject) {
-		
+			
 	}
 	
 	@IBAction func useWorkHDataSwitchValueChanged(sender: AnyObject) {

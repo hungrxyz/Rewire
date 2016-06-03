@@ -21,7 +21,7 @@ class RealmProvider {
 //			var config = Realm.Configuration()
 //			config.fileURL = realmURL
 //			Realm.Configuration.defaultConfiguration = config
-			
+			Realm.Configuration.defaultConfiguration.inMemoryIdentifier = "RealmTests"
 			return try! Realm()
 		}
 	}

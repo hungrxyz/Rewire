@@ -8,7 +8,7 @@
 
 import XCTest
 
-class RealmTests: XCTestCase {
+class RealmHandlerTests: XCTestCase {
 	
 	override func setUp() {
 		super.setUp()

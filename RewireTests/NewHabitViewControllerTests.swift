@@ -9,7 +9,7 @@
 import XCTest
 @testable import Rewire
 
-class NewHabitTests: XCTestCase {
+class NewHabitViewControllerTests: XCTestCase {
 	
 	var newHabitViewController: NewHabitViewController!
 	
@@ -41,7 +41,6 @@ class NewHabitTests: XCTestCase {
 		textFieldTextDidChange()
 		XCTAssert(newHabitViewController.startNewHabitButton.enabled == false, "Start New Habit button shouldn't be enabled")
 	}
-	
 	
 	func test_correctHabitName_saved() {
 		newHabitViewController.newHabitNameTextField.text = "New Habit Name"

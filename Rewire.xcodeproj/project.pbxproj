@@ -11,10 +11,11 @@
 		C8AC23E7D69CAF15B5DDE074 /* Pods_Rewire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B41C5F6ED5362284218E63DE /* Pods_Rewire.framework */; };
 		FA1929EA1CFC29A400728B36 /* Day.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1929E91CFC29A400728B36 /* Day.swift */; };
 		FA1929EC1CFC6B8500728B36 /* TwitterHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1929EB1CFC6B8500728B36 /* TwitterHandler.swift */; };
-		FA192A0D1CFCF4F300728B36 /* TwitterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA192A0C1CFCF4F300728B36 /* TwitterTests.swift */; };
+		FA192A0D1CFCF4F300728B36 /* TwitterHandlerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA192A0C1CFCF4F300728B36 /* TwitterHandlerTests.swift */; };
 		FA192A111CFDFC8C00728B36 /* TwitterAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA192A101CFDFC8C00728B36 /* TwitterAPI.swift */; };
-		FA192A131CFDFD9F00728B36 /* RealmTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA192A121CFDFD9F00728B36 /* RealmTests.swift */; };
-		FA9382D21CFB7AD600F6357D /* NewHabitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9382D11CFB7AD600F6357D /* NewHabitTests.swift */; };
+		FA192A131CFDFD9F00728B36 /* RealmHandlerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA192A121CFDFD9F00728B36 /* RealmHandlerTests.swift */; };
+		FA802FDE1CFF9BD400318A6A /* ProgressHUDHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA802FDD1CFF9BD400318A6A /* ProgressHUDHandler.swift */; };
+		FA9382D21CFB7AD600F6357D /* NewHabitViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9382D11CFB7AD600F6357D /* NewHabitViewControllerTests.swift */; };
 		FA9382D41CFB7B6E00F6357D /* NewHabit.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA9382D31CFB7B6E00F6357D /* NewHabit.storyboard */; };
 		FA9382D81CFBA02600F6357D /* RealmHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9382D71CFBA02600F6357D /* RealmHandler.swift */; };
 		FA9382DE1CFC285100F6357D /* Habit.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9382DD1CFC285100F6357D /* Habit.swift */; };
@@ -43,12 +44,13 @@
 		D1258A4F5E61D2C2A4A1B490 /* Pods-RewireTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RewireTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RewireTests/Pods-RewireTests.debug.xcconfig"; sourceTree = "<group>"; };
 		FA1929E91CFC29A400728B36 /* Day.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Day.swift; sourceTree = "<group>"; };
 		FA1929EB1CFC6B8500728B36 /* TwitterHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitterHandler.swift; sourceTree = "<group>"; };
-		FA192A0C1CFCF4F300728B36 /* TwitterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitterTests.swift; sourceTree = "<group>"; };
+		FA192A0C1CFCF4F300728B36 /* TwitterHandlerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitterHandlerTests.swift; sourceTree = "<group>"; };
 		FA192A101CFDFC8C00728B36 /* TwitterAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitterAPI.swift; sourceTree = "<group>"; };
-		FA192A121CFDFD9F00728B36 /* RealmTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmTests.swift; sourceTree = "<group>"; };
+		FA192A121CFDFD9F00728B36 /* RealmHandlerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmHandlerTests.swift; sourceTree = "<group>"; };
 		FA2FE42E1CF6881100324B00 /* RewireTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RewireTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA2FE4321CF6881100324B00 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FA9382D11CFB7AD600F6357D /* NewHabitTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewHabitTests.swift; sourceTree = "<group>"; };
+		FA802FDD1CFF9BD400318A6A /* ProgressHUDHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressHUDHandler.swift; sourceTree = "<group>"; };
+		FA9382D11CFB7AD600F6357D /* NewHabitViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewHabitViewControllerTests.swift; sourceTree = "<group>"; };
 		FA9382D31CFB7B6E00F6357D /* NewHabit.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = NewHabit.storyboard; sourceTree = "<group>"; };
 		FA9382D71CFBA02600F6357D /* RealmHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmHandler.swift; sourceTree = "<group>"; };
 		FA9382DA1CFBBC2C00F6357D /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = "Pods/../build/Debug-iphoneos/RealmSwift/RealmSwift.framework"; sourceTree = "<group>"; };
@@ -109,17 +111,27 @@
 				FA192A101CFDFC8C00728B36 /* TwitterAPI.swift */,
 			);
 			name = Twitter;
+			path = Rewire;
 			sourceTree = "<group>";
 		};
 		FA2FE42F1CF6881100324B00 /* RewireTests */ = {
 			isa = PBXGroup;
 			children = (
-				FA9382D11CFB7AD600F6357D /* NewHabitTests.swift */,
-				FA192A121CFDFD9F00728B36 /* RealmTests.swift */,
-				FA192A0C1CFCF4F300728B36 /* TwitterTests.swift */,
+				FA9382D11CFB7AD600F6357D /* NewHabitViewControllerTests.swift */,
+				FA192A0C1CFCF4F300728B36 /* TwitterHandlerTests.swift */,
+				FA192A121CFDFD9F00728B36 /* RealmHandlerTests.swift */,
 				FA2FE4321CF6881100324B00 /* Info.plist */,
 			);
 			path = RewireTests;
+			sourceTree = "<group>";
+		};
+		FA802FDF1CFF9E6800318A6A /* ProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				FA802FDD1CFF9BD400318A6A /* ProgressHUDHandler.swift */,
+			);
+			name = ProgressHUD;
+			path = Rewire;
 			sourceTree = "<group>";
 		};
 		FA9382D51CFB7C8700F6357D /* New Habit */ = {
@@ -165,8 +177,10 @@
 			isa = PBXGroup;
 			children = (
 				FAE28EE31CA2017800E88D38 /* Rewire */,
+				FA192A0B1CFCF16E00728B36 /* Twitter */,
 				FA9382D91CFBA05900F6357D /* Realm */,
 				FA9382DF1CFC287000F6357D /* Data Models */,
+				FA802FDF1CFF9E6800318A6A /* ProgressHUD */,
 				FA2FE42F1CF6881100324B00 /* RewireTests */,
 				FAE28EE21CA2017800E88D38 /* Products */,
 				A78905883D5C73DCD474D765 /* Pods */,
@@ -188,7 +202,6 @@
 			children = (
 				FA9382D61CFB7C8F00F6357D /* Underground */,
 				FA9382D51CFB7C8700F6357D /* New Habit */,
-				FA192A0B1CFCF16E00728B36 /* Twitter */,
 			);
 			path = Rewire;
 			sourceTree = "<group>";
@@ -393,9 +406,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FA192A131CFDFD9F00728B36 /* RealmTests.swift in Sources */,
-				FA9382D21CFB7AD600F6357D /* NewHabitTests.swift in Sources */,
-				FA192A0D1CFCF4F300728B36 /* TwitterTests.swift in Sources */,
+				FA192A131CFDFD9F00728B36 /* RealmHandlerTests.swift in Sources */,
+				FA9382D21CFB7AD600F6357D /* NewHabitViewControllerTests.swift in Sources */,
+				FA192A0D1CFCF4F300728B36 /* TwitterHandlerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -410,6 +423,7 @@
 				FA9382DE1CFC285100F6357D /* Habit.swift in Sources */,
 				FA1929EA1CFC29A400728B36 /* Day.swift in Sources */,
 				FAE28EE51CA2017800E88D38 /* AppDelegate.swift in Sources */,
+				FA802FDE1CFF9BD400318A6A /* ProgressHUDHandler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

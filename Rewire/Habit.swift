@@ -12,10 +12,7 @@ import RealmSwift
 class Habit: Object {
 	dynamic var id = NSUUID().UUIDString
 	dynamic var name = ""
-	dynamic var linkTwitterAccount = false
-	dynamic var notifications = false
-	dynamic var useTo_dayData = false
-	dynamic var useWorkHData = false
+	dynamic var twitterAccountId: String?
 	
 	override static func primaryKey() -> String? {
 		return "id"

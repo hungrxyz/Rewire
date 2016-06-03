@@ -6,26 +6,21 @@
 //  Copyright © 2016 Zel Marko. All rights reserved.
 //
 
-import Foundation
+import UIKit
 import Accounts
 
 class TwitterHandler {
-	let api: API
+	var api: API
+	var completion: ((accountId: String?) -> Void)!
 	
 	init(api: API = TwitterAPI()) {
 		self.api = api
 	}
 	
-	func setup() -> String? {
-		if api.requestAccessToAccounts() {
-			if let accounts = api.getAccounts() {
-				return processAccounts(accounts)
-			}
-		}
-		return nil
-	}
-	
-	func processAccounts(accounts: [ACAccount]) -> String {
-		return accounts.first!.username
+	func setup(completion: (accountId: String?) -> Void) {
+		api.twitterHandler = self
+		self.completion = completion
+		
+		api.requestAccessToAccounts()
 	}
 }
