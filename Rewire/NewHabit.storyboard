@@ -28,7 +28,7 @@
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="70" translatesAutoresizingMaskIntoConstraints="NO" id="zSx-5d-4mP">
-                                            <rect key="frame" x="30" y="54" width="260" height="460"/>
+                                            <rect key="frame" x="30" y="39" width="260" height="490"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Start with a new habit" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AXN-4m-du5">
                                                     <rect key="frame" x="0.0" y="0.0" width="260" height="30"/>
@@ -39,7 +39,7 @@
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ZNt-2D-FGu">
                                                     <rect key="frame" x="0.0" y="100" width="260" height="31"/>
                                                     <subviews>
-                                                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Habit Name" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="hxe-R4-dkk">
+                                                        <textField opaque="NO" clipsSubviews="YES" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Habit Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hxe-R4-dkk">
                                                             <rect key="frame" x="0.0" y="0.0" width="260" height="30"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                             <fontDescription key="fontDescription" type="system" weight="light" pointSize="25"/>
@@ -51,7 +51,7 @@
                                                             </userDefinedRuntimeAttributes>
                                                             <connections>
                                                                 <action selector="habitNameTextFieldEditingChanged:" destination="39X-vJ-uP2" eventType="editingChanged" id="IS2-9f-I2S"/>
-                                                                <outlet property="delegate" destination="39X-vJ-uP2" id="WD2-fm-B0C"/>
+                                                                <outlet property="delegate" destination="39X-vJ-uP2" id="POJ-cL-TJB"/>
                                                             </connections>
                                                         </textField>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u49-02-muE">
@@ -64,7 +64,7 @@
                                                     </subviews>
                                                 </stackView>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="FjY-ik-guJ">
-                                                    <rect key="frame" x="0.0" y="201" width="260" height="139"/>
+                                                    <rect key="frame" x="0.0" y="201" width="260" height="169"/>
                                                     <subviews>
                                                         <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QGJ-Ox-sRh">
                                                             <rect key="frame" x="0.0" y="0.0" width="260" height="31"/>
@@ -134,10 +134,60 @@
                                                                 </switch>
                                                             </subviews>
                                                         </stackView>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="bottom" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="9rE-Gf-bhe">
+                                                            <rect key="frame" x="0.0" y="144" width="260" height="25"/>
+                                                            <subviews>
+                                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="gQ0-Ld-ic7">
+                                                                    <rect key="frame" x="0.0" y="3" width="200" height="22"/>
+                                                                    <subviews>
+                                                                        <textField opaque="NO" clipsSubviews="YES" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Custom" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Lwr-yQ-kzS">
+                                                                            <rect key="frame" x="0.0" y="0.0" width="200" height="21"/>
+                                                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                                            <fontDescription key="fontDescription" type="system" weight="thin" pointSize="17"/>
+                                                                            <textInputTraits key="textInputTraits" autocapitalizationType="words" keyboardAppearance="alert" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
+                                                                            <connections>
+                                                                                <outlet property="delegate" destination="39X-vJ-uP2" id="43D-qB-28d"/>
+                                                                            </connections>
+                                                                        </textField>
+                                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7my-vv-KnI">
+                                                                            <rect key="frame" x="0.0" y="21" width="200" height="1"/>
+                                                                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                                            <constraints>
+                                                                                <constraint firstAttribute="height" constant="0.5" id="4Vk-yJ-d5X"/>
+                                                                            </constraints>
+                                                                        </view>
+                                                                    </subviews>
+                                                                </stackView>
+                                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="kRH-51-gpw">
+                                                                    <rect key="frame" x="205" y="0.0" width="55" height="25"/>
+                                                                    <subviews>
+                                                                        <textField opaque="NO" clipsSubviews="YES" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Abbr." textAlignment="center" adjustsFontSizeToFit="NO" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="fyD-dt-f0c">
+                                                                            <rect key="frame" x="0.0" y="0.0" width="55" height="24"/>
+                                                                            <constraints>
+                                                                                <constraint firstAttribute="width" constant="55" id="TLH-WH-zFE"/>
+                                                                            </constraints>
+                                                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                                            <fontDescription key="fontDescription" type="system" weight="thin" pointSize="20"/>
+                                                                            <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters" autocorrectionType="no" spellCheckingType="no" keyboardAppearance="alert" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                                                                            <connections>
+                                                                                <outlet property="delegate" destination="39X-vJ-uP2" id="cKt-NW-569"/>
+                                                                            </connections>
+                                                                        </textField>
+                                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="juG-VS-7om">
+                                                                            <rect key="frame" x="0.0" y="24" width="55" height="1"/>
+                                                                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                                            <constraints>
+                                                                                <constraint firstAttribute="height" constant="0.5" id="aTT-mm-vD8"/>
+                                                                            </constraints>
+                                                                        </view>
+                                                                    </subviews>
+                                                                </stackView>
+                                                            </subviews>
+                                                        </stackView>
                                                     </subviews>
                                                 </stackView>
                                                 <button opaque="NO" alpha="0.5" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zY3-g0-l3e">
-                                                    <rect key="frame" x="0.0" y="410" width="260" height="50"/>
+                                                    <rect key="frame" x="0.0" y="440" width="260" height="50"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="50" id="Lt2-E5-Nlc"/>
@@ -179,13 +229,11 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="linkTwitterAccountSwitch" destination="eWs-gS-pSJ" id="Kgw-v2-Cik"/>
+                        <outlet property="customTextField" destination="Lwr-yQ-kzS" id="JkY-LD-AKd"/>
+                        <outlet property="customTextFieldAbbr" destination="fyD-dt-f0c" id="RkJ-F6-sNv"/>
                         <outlet property="newHabitNameLabel" destination="AXN-4m-du5" id="IDn-tt-402"/>
                         <outlet property="newHabitNameTextField" destination="hxe-R4-dkk" id="Oa1-1H-jJJ"/>
-                        <outlet property="notificationsSwitch" destination="khv-fy-fM0" id="GHJ-Ld-W6h"/>
-                        <outlet property="startNewHabitButton" destination="zY3-g0-l3e" id="ocs-nC-6iX"/>
-                        <outlet property="useTo_dayDataSwitch" destination="wRa-1y-mhu" id="YHu-GI-VRa"/>
-                        <outlet property="useWorkHDataSwitch" destination="2jE-PL-ubM" id="8mT-8f-izI"/>
+                        <outlet property="startNewHabitButton" destination="zY3-g0-l3e" id="18I-GE-MbL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hSh-nJ-SAs" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -1,20 +1,12 @@
 PODS:
   - MBProgressHUD (0.9.2)
-  - Realm (0.101.0):
-    - Realm/Headers (= 0.101.0)
-  - Realm/Headers (0.101.0)
-  - RealmSwift (0.101.0):
-    - Realm (= 0.101.0)
 
 DEPENDENCIES:
   - MBProgressHUD
-  - RealmSwift
 
 SPEC CHECKSUMS:
   MBProgressHUD: 1569cf7ace17a8bac47aabfbb8580a49690386d1
-  Realm: b21596d6d7e1c054f6fae967d27263d2593ca309
-  RealmSwift: 5247501bcd68b9db3a718cba808e1ce45ba67034
 
-PODFILE CHECKSUM: a8ee059d334f44d833c06aafc103808a2bcde119
+PODFILE CHECKSUM: 79e8fb188ea36f3e61081cad00d2ada6aeaec766
 
 COCOAPODS: 1.0.0.rc.1

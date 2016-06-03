@@ -13,11 +13,9 @@ class NewHabitViewController: UIViewController {
 	
 	@IBOutlet weak var newHabitNameLabel: UILabel!
 	@IBOutlet weak var newHabitNameTextField: UITextField!
-	@IBOutlet weak var linkTwitterAccountSwitch: UISwitch!
-	@IBOutlet weak var notificationsSwitch: UISwitch!
-	@IBOutlet weak var useTo_dayDataSwitch: UISwitch!
-	@IBOutlet weak var useWorkHDataSwitch: UISwitch!
 	@IBOutlet weak var startNewHabitButton: UIButton!
+	@IBOutlet weak var customTextField: UITextField!
+	@IBOutlet weak var customTextFieldAbbr: UITextField!
 	
 	var twitterHandler: TwitterHandler!
 	
@@ -32,10 +30,7 @@ class NewHabitViewController: UIViewController {
 	}
 	
 	@IBAction func startNewHabitButtonTapped(sender: AnyObject) {
-		let newHabit = Habit()
-		newHabit.name = newHabitNameTextField.text!
 		
-		RealmHandler.sharedInstance.addNewHabit(newHabit)
 	}
 	
 	@IBAction func linkTwitterAccountSwitchValueChanged(sender: UISwitch) {
@@ -65,7 +60,6 @@ class NewHabitViewController: UIViewController {
 	
 	@IBAction func habitNameTextFieldEditingChanged(textField: UITextField) {
 		if textField.text == "Habit Name" || textField.text == "" {
-			print(textField.text)
 			startNewHabitButton.enabled = false
 			startNewHabitButton.alpha = 0.5
 		} else {
@@ -77,7 +71,37 @@ class NewHabitViewController: UIViewController {
 
 extension NewHabitViewController: UITextFieldDelegate {
 	
+	func textFieldDidBeginEditing(textField: UITextField) {
+		if textField == customTextField && textField.text == "Custom" {
+			textField.text = ""
+			textField.alpha = 1
+		} else if textField == customTextFieldAbbr && textField.text == "Abbr." {
+			textField.text = ""
+			textField.alpha = 1
+		} else if textField == newHabitNameTextField && textField.text == "Habit Name" {
+			textField.text = ""
+			textField.alpha = 1
+		}
+	}
+	
+	func textFieldDidEndEditing(textField: UITextField) {
+		if textField == customTextField && textField.text == "" {
+			textField.text = "Custom"
+			textField.alpha = 0.5
+		} else if textField == customTextFieldAbbr && textField.text == "" {
+			textField.text = "Abbr."
+			textField.alpha = 0.5
+		} else if textField == customTextFieldAbbr && textField.text == "" {
+			textField.text = "Habit Name"
+			textField.alpha = 0.5
+		}
+	}
+	
 	func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool {
+		
+		if textField == customTextFieldAbbr && textField.text?.characters.count >= 4 && string != "" {
+			return false
+		}
 		return true
 	}
 }

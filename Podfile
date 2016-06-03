@@ -5,14 +5,12 @@ use_frameworks!
 
 target 'Rewire' do
 
-pod 'RealmSwift'
 pod 'MBProgressHUD'
 
 end
 
 target 'RewireTests' do
 
-pod 'RealmSwift'
 pod 'MBProgressHUD'
 
 end

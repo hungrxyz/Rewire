@@ -2,13 +2,15 @@
 //  Day.swift
 //  Rewire
 //
-//  Created by Zel Marko on 5/30/16.
+//  Created by Zel Marko on 6/4/16.
 //  Copyright © 2016 Zel Marko. All rights reserved.
 //
 
 import Foundation
-import RealmSwift
 
-class Day: Object {
-	
-}
+//class Day {
+//	var habit: Habit
+//	var date: NSDate
+//	
+//	
+//}
