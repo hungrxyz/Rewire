@@ -16,10 +16,13 @@ class NewHabitViewController: UIViewController {
 	@IBOutlet weak var startNewHabitButton: UIButton!
 	@IBOutlet weak var customTextField: UITextField!
 	@IBOutlet weak var customTextFieldAbbr: UITextField!
+	@IBOutlet weak var scrollView: UIScrollView!
 	
 	var twitterHandler: TwitterHandler!
 	
 	var twitterAccountId: String?
+	
+	var keyboardShown = false
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
@@ -27,6 +30,19 @@ class NewHabitViewController: UIViewController {
 		twitterHandler = TwitterHandler()
 		
 		view.backgroundColor = UIColor(patternImage: UIImage(named: "AppIcon60x60")!)
+		
+		NSNotificationCenter.defaultCenter().addObserver(self,
+		                                                 selector: #selector(keyboardWillShow(_:)),
+		                                                 name: UIKeyboardWillShowNotification,
+		                                                 object: nil)
+		NSNotificationCenter.defaultCenter().addObserver(self,
+		                                                 selector: #selector(keyboardWillHide(_:)),
+		                                                 name: UIKeyboardWillHideNotification,
+		                                                 object: nil)
+		NSNotificationCenter.defaultCenter().addObserver(self,
+		                                                 selector: #selector(keyboardFrameDidChange(_:)),
+		                                                 name: UIKeyboardDidChangeFrameNotification,
+		                                                 object: nil)
 	}
 	
 	@IBAction func startNewHabitButtonTapped(sender: AnyObject) {
@@ -67,6 +83,34 @@ class NewHabitViewController: UIViewController {
 			startNewHabitButton.alpha = 1
 		}
 	}
+	
+	func keyboardWillShow(notification: NSNotification) {
+		adjustScrollViewInsetForKeyboardAction(true, change: nil, notification: notification)
+		keyboardShown = true
+	}
+	
+	func keyboardWillHide(notification: NSNotification) {
+		adjustScrollViewInsetForKeyboardAction(false, change: nil, notification: notification)
+		keyboardShown = false
+	}
+	
+	func keyboardFrameDidChange(notification: NSNotification) {
+		adjustScrollViewInsetForKeyboardAction(nil, change: true, notification: notification)
+	}
+	
+	func adjustScrollViewInsetForKeyboardAction(show: Bool?, change: Bool?, notification: NSNotification) {
+		guard let value = notification.userInfo?[UIKeyboardFrameEndUserInfoKey] as? NSValue else { return }
+		let keyboardFrame = value.CGRectValue()
+		var adjustmentHeight: CGFloat!
+		if let show = show {
+			adjustmentHeight = CGRectGetHeight(keyboardFrame) * (show ? (keyboardShown ? 0 : 1) : -1)
+		} else if let _ = change {
+			adjustmentHeight = CGRectGetHeight(keyboardFrame) - scrollView.contentInset.bottom
+		}
+		
+		scrollView.contentInset.bottom += adjustmentHeight
+		scrollView.scrollIndicatorInsets.bottom += adjustmentHeight
+	}
 }
 
 extension NewHabitViewController: UITextFieldDelegate {
@@ -102,6 +146,11 @@ extension NewHabitViewController: UITextFieldDelegate {
 		if textField == customTextFieldAbbr && textField.text?.characters.count >= 4 && string != "" {
 			return false
 		}
+		return true
+	}
+	
+	func textFieldShouldReturn(textField: UITextField) -> Bool {
+		textField.resignFirstResponder()
 		return true
 	}
 }
