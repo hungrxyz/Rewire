@@ -13,6 +13,10 @@ class NewHabitViewController: UIViewController {
 	
 	@IBOutlet weak var newHabitNameLabel: UILabel!
 	@IBOutlet weak var newHabitNameTextField: UITextField!
+	@IBOutlet weak var linkTwitterAccountSwitch: UISwitch!
+	@IBOutlet weak var useTo_dayDataSwitch: UISwitch!
+	@IBOutlet weak var useWorkHDataSwitch: UISwitch!
+	@IBOutlet weak var notificationsSwitch: UISwitch!
 	@IBOutlet weak var startNewHabitButton: UIButton!
 	@IBOutlet weak var customTextField: UITextField!
 	@IBOutlet weak var customTextFieldAbbr: UITextField!
@@ -23,6 +27,7 @@ class NewHabitViewController: UIViewController {
 	var twitterAccountId: String?
 	
 	var keyboardShown = false
+	var lastActiveTextField: UITextField?
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
@@ -43,10 +48,26 @@ class NewHabitViewController: UIViewController {
 		                                                 selector: #selector(keyboardFrameDidChange(_:)),
 		                                                 name: UIKeyboardDidChangeFrameNotification,
 		                                                 object: nil)
+		
+		let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(viewWasTapped))
+		view.addGestureRecognizer(tapGestureRecognizer)
 	}
 	
 	@IBAction func startNewHabitButtonTapped(sender: AnyObject) {
+		HUD.sharedInstance.showWithText("Setting up " + newHabitNameTextField.text!)
 		
+		let newHabit = Habit(name: newHabitNameTextField.text!,
+		                     twitterAccountId: twitterAccountId, 
+		                     useTo_dayData: useTo_dayDataSwitch.on,
+		                     useWorkHData: useWorkHDataSwitch.on,
+		                     notifications: false,
+		                     tasks: nil)
+		
+		CKHandler.sharedInstance.newHabit(newHabit) { success in
+			if success {
+				// Present the next View Controller
+			}
+		}
 	}
 	
 	@IBAction func linkTwitterAccountSwitchValueChanged(sender: UISwitch) {
@@ -62,15 +83,21 @@ class NewHabitViewController: UIViewController {
 		}
 	}
 	
-	@IBAction func useTo_dayDataSwitchValueChanged(sender: AnyObject) {
-			
+	@IBAction func useTo_dayDataSwitchValueChanged(sender: UISwitch) {
+		if sender.on {
+			HUD.sharedInstance.showWithText("Setting up To-day data")
+			CKTo_dayDataHandler.sharedInstance.checkExistingTo_dayData()
+		}
 	}
 	
-	@IBAction func useWorkHDataSwitchValueChanged(sender: AnyObject) {
-		
+	@IBAction func useWorkHDataSwitchValueChanged(sender: UISwitch) {
+		if sender.on {
+			HUD.sharedInstance.showWithText("Setting up WorkH data")
+			CKWorkHDataHandler.sharedInstance.checkExistingWorkHData()			
+		}
 	}
 	
-	@IBAction func notificationsSwitchValueChanged(sender: AnyObject) {
+	@IBAction func notificationsSwitchValueChanged(sender: UISwitch) {
 		
 	}
 	
@@ -111,11 +138,19 @@ class NewHabitViewController: UIViewController {
 		scrollView.contentInset.bottom += adjustmentHeight
 		scrollView.scrollIndicatorInsets.bottom += adjustmentHeight
 	}
+	
+	func viewWasTapped() {
+		if let textField = lastActiveTextField {
+			textField.resignFirstResponder()
+		}
+	}
 }
 
 extension NewHabitViewController: UITextFieldDelegate {
 	
 	func textFieldDidBeginEditing(textField: UITextField) {
+		lastActiveTextField = textField
+		
 		if textField == customTextField && textField.text == "Custom" {
 			textField.text = ""
 			textField.alpha = 1

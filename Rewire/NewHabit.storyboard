@@ -21,7 +21,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <color key="backgroundColor" red="0.01176470588" green="0.87058823529999996" blue="0.4431372549" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0hx-qw-ZGt">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0hx-qw-ZGt">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <subviews>
                                     <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AZY-nd-FxC">
@@ -244,10 +244,14 @@
                     <connections>
                         <outlet property="customTextField" destination="Lwr-yQ-kzS" id="JkY-LD-AKd"/>
                         <outlet property="customTextFieldAbbr" destination="fyD-dt-f0c" id="RkJ-F6-sNv"/>
+                        <outlet property="linkTwitterAccountSwitch" destination="eWs-gS-pSJ" id="ALO-5L-y84"/>
                         <outlet property="newHabitNameLabel" destination="AXN-4m-du5" id="IDn-tt-402"/>
                         <outlet property="newHabitNameTextField" destination="hxe-R4-dkk" id="Oa1-1H-jJJ"/>
+                        <outlet property="notificationsSwitch" destination="2jE-PL-ubM" id="Drt-1d-rIG"/>
                         <outlet property="scrollView" destination="0hx-qw-ZGt" id="ran-Is-mGa"/>
                         <outlet property="startNewHabitButton" destination="zY3-g0-l3e" id="18I-GE-MbL"/>
+                        <outlet property="useTo_dayDataSwitch" destination="khv-fy-fM0" id="qL0-9k-bjz"/>
+                        <outlet property="useWorkHDataSwitch" destination="wRa-1y-mhu" id="6tJ-mB-OS9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hSh-nJ-SAs" userLabel="First Responder" sceneMemberID="firstResponder"/>

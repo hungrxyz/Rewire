@@ -15,6 +15,11 @@
 		FA31DBFB1D024688007410D3 /* Habit.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA31DBFA1D024688007410D3 /* Habit.swift */; };
 		FA31DBFD1D02479B007410D3 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA31DBFC1D02479B007410D3 /* Task.swift */; };
 		FA31DBFF1D024C70007410D3 /* Day.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA31DBFE1D024C70007410D3 /* Day.swift */; };
+		FA52C1871D0881C4007C4000 /* CKWorkHDataHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA52C1861D0881C4007C4000 /* CKWorkHDataHandler.swift */; };
+		FA6C11FE1D086E29002E2516 /* CKHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6C11FD1D086E29002E2516 /* CKHandler.swift */; };
+		FA6C12021D086E65002E2516 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA6C12011D086E65002E2516 /* CloudKit.framework */; };
+		FA6C12041D0870DC002E2516 /* CKHandlerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6C12031D0870DC002E2516 /* CKHandlerTests.swift */; };
+		FA6C12061D087793002E2516 /* CKTo-dayDataHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6C12051D087793002E2516 /* CKTo-dayDataHandler.swift */; };
 		FA802FDE1CFF9BD400318A6A /* ProgressHUDHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA802FDD1CFF9BD400318A6A /* ProgressHUDHandler.swift */; };
 		FA9382D21CFB7AD600F6357D /* NewHabitViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9382D11CFB7AD600F6357D /* NewHabitViewControllerTests.swift */; };
 		FA9382D41CFB7B6E00F6357D /* NewHabit.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA9382D31CFB7B6E00F6357D /* NewHabit.storyboard */; };
@@ -49,6 +54,12 @@
 		FA31DBFA1D024688007410D3 /* Habit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Habit.swift; sourceTree = "<group>"; };
 		FA31DBFC1D02479B007410D3 /* Task.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		FA31DBFE1D024C70007410D3 /* Day.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Day.swift; sourceTree = "<group>"; };
+		FA52C1861D0881C4007C4000 /* CKWorkHDataHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CKWorkHDataHandler.swift; sourceTree = "<group>"; };
+		FA6C11FD1D086E29002E2516 /* CKHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CKHandler.swift; sourceTree = "<group>"; };
+		FA6C12001D086E4D002E2516 /* Rewire.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Rewire.entitlements; sourceTree = "<group>"; };
+		FA6C12011D086E65002E2516 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		FA6C12031D0870DC002E2516 /* CKHandlerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CKHandlerTests.swift; sourceTree = "<group>"; };
+		FA6C12051D087793002E2516 /* CKTo-dayDataHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CKTo-dayDataHandler.swift"; sourceTree = "<group>"; };
 		FA802FDD1CFF9BD400318A6A /* ProgressHUDHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressHUDHandler.swift; sourceTree = "<group>"; };
 		FA9382D11CFB7AD600F6357D /* NewHabitViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewHabitViewControllerTests.swift; sourceTree = "<group>"; };
 		FA9382D31CFB7B6E00F6357D /* NewHabit.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = NewHabit.storyboard; sourceTree = "<group>"; };
@@ -75,6 +86,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C8AC23E7D69CAF15B5DDE074 /* Pods_Rewire.framework in Frameworks */,
+				FA6C12021D086E65002E2516 /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,6 +96,7 @@
 		3E323B37934C56227FD644B5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FA6C12011D086E65002E2516 /* CloudKit.framework */,
 				FA9382DA1CFBBC2C00F6357D /* RealmSwift.framework */,
 				B41C5F6ED5362284218E63DE /* Pods_Rewire.framework */,
 				838E07881E826B170FCCD7A7 /* Pods_RewireTests.framework */,
@@ -115,10 +128,21 @@
 			isa = PBXGroup;
 			children = (
 				FA9382D11CFB7AD600F6357D /* NewHabitViewControllerTests.swift */,
+				FA6C12031D0870DC002E2516 /* CKHandlerTests.swift */,
 				FA192A0C1CFCF4F300728B36 /* TwitterHandlerTests.swift */,
 				FA2FE4321CF6881100324B00 /* Info.plist */,
 			);
 			path = RewireTests;
+			sourceTree = "<group>";
+		};
+		FA6C11FF1D086E2E002E2516 /* Cloud Kit */ = {
+			isa = PBXGroup;
+			children = (
+				FA6C11FD1D086E29002E2516 /* CKHandler.swift */,
+				FA6C12051D087793002E2516 /* CKTo-dayDataHandler.swift */,
+				FA52C1861D0881C4007C4000 /* CKWorkHDataHandler.swift */,
+			);
+			name = "Cloud Kit";
 			sourceTree = "<group>";
 		};
 		FA802FDF1CFF9E6800318A6A /* ProgressHUD */ = {
@@ -182,8 +206,10 @@
 		FAE28EE31CA2017800E88D38 /* Rewire */ = {
 			isa = PBXGroup;
 			children = (
-				FA9382D51CFB7C8700F6357D /* New Habit */,
+				FA6C12001D086E4D002E2516 /* Rewire.entitlements */,
 				FA9382D61CFB7C8F00F6357D /* Underground */,
+				FA9382D51CFB7C8700F6357D /* New Habit */,
+				FA6C11FF1D086E2E002E2516 /* Cloud Kit */,
 				FA192A0B1CFCF16E00728B36 /* Twitter */,
 				FA9382DF1CFC287000F6357D /* Data Models */,
 				FA802FDF1CFF9E6800318A6A /* ProgressHUD */,
@@ -251,6 +277,15 @@
 					};
 					FAE28EE01CA2017800E88D38 = {
 						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = 96HG6E2WJ6;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+							com.apple.iCloud = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -392,6 +427,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA9382D21CFB7AD600F6357D /* NewHabitViewControllerTests.swift in Sources */,
+				FA6C12041D0870DC002E2516 /* CKHandlerTests.swift in Sources */,
 				FA192A0D1CFCF4F300728B36 /* TwitterHandlerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -401,12 +437,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA31DBFB1D024688007410D3 /* Habit.swift in Sources */,
+				FA52C1871D0881C4007C4000 /* CKWorkHDataHandler.swift in Sources */,
 				FA1929EC1CFC6B8500728B36 /* TwitterHandler.swift in Sources */,
 				FA31DBFF1D024C70007410D3 /* Day.swift in Sources */,
 				FA192A111CFDFC8C00728B36 /* TwitterAPI.swift in Sources */,
+				FA6C11FE1D086E29002E2516 /* CKHandler.swift in Sources */,
 				FA9530931CF8F40D00BA6771 /* NewHabitViewController.swift in Sources */,
 				FAE28EE51CA2017800E88D38 /* AppDelegate.swift in Sources */,
 				FA31DBFD1D02479B007410D3 /* Task.swift in Sources */,
+				FA6C12061D087793002E2516 /* CKTo-dayDataHandler.swift in Sources */,
 				FA802FDE1CFF9BD400318A6A /* ProgressHUDHandler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -558,6 +597,7 @@
 			baseConfigurationReference = 7EB8D5F618163DD888279FE5 /* Pods-Rewire.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Rewire/Rewire.entitlements;
 				INFOPLIST_FILE = Rewire/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.zzzel.Rewire;
@@ -570,6 +610,7 @@
 			baseConfigurationReference = CAB46FD09DE61874350DFF8B /* Pods-Rewire.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Rewire/Rewire.entitlements;
 				INFOPLIST_FILE = Rewire/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.zzzel.Rewire;

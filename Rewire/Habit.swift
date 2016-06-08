@@ -10,20 +10,30 @@ import UIKit
 
 class Habit {
 	var name: String
+	var stage: Int
 	var createdDate: NSDate
 	var twitterAccountId: String?
 	var useTo_dayData: Bool
 	var useWorkHData: Bool
 	var notifications: Bool
-	var customTasks: [Task]?
+	var tasks: [Task]?
 	
-	init(name: String, createdDate: NSDate = NSDate(), twitterAccountId: String?, useTo_dayData: Bool = false, useWorkHData: Bool = false, notifications: Bool = false, customTasks: [Task]?) {
+	init(name: String,
+	     stage: Int = 1,
+	     createdDate: NSDate = NSDate(),
+	     twitterAccountId: String?,
+	     useTo_dayData: Bool,
+	     useWorkHData: Bool,
+	     notifications: Bool,
+	     tasks: [Task]?) {
+		
 		self.name = name
+		self.stage = stage
 		self.createdDate = createdDate
 		self.twitterAccountId = twitterAccountId
 		self.useTo_dayData = useTo_dayData
 		self.useWorkHData = useWorkHData
 		self.notifications = notifications
-		self.customTasks = customTasks
+		self.tasks = tasks
 	}
 }
