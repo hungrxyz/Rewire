@@ -16,6 +16,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 	func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
 		
+		if let currentHabitRecordID = NSUserDefaults.standardUserDefaults().valueForKey("currentHabitRecordID") as? String {
+			CKHandler.sharedInstance.fetchHabitRecord(currentHabitRecordID)
+		} else {
+			let storyboard = UIStoryboard(name: "NewHabit", bundle: nil)
+			if let newHabitViewController = storyboard.instantiateInitialViewController() as? NewHabitViewController {
+				window?.rootViewController = newHabitViewController
+				window?.makeKeyAndVisible()
+			}
+		}
+		
 		return true
 	}
 

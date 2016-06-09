@@ -9,16 +9,18 @@
 import Foundation
 
 class Day {
-	var habit: Habit
-	var number: Int
-	var date: NSDate
-	var to_dayDataGoal: Int
+	let id: String
+	let habit: Habit
+	let number: Int
+	let date: NSDate
+	let to_dayDataGoal: Int
 	var to_dayData: Int
-	var workHDataGoal: Double
+	let workHDataGoal: Double
 	var workHData: Double
 	var tasks: [Task]?
 	
-	init(habit: Habit,
+	init(id: String = NSUUID().UUIDString,
+	     habit: Habit,
 	     number: Int = 1,
 	     date: NSDate = NSDate(),
 	     to_dayDataGoal: Int,
@@ -27,6 +29,7 @@ class Day {
 	     workHData: Double,
 	     tasks: [Task]?) {
 		
+		self.id = id
 		self.habit = habit
 		self.number = number
 		self.date = date

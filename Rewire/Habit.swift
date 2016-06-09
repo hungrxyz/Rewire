@@ -9,6 +9,7 @@
 import UIKit
 
 class Habit {
+	var id: String
 	var name: String
 	var stage: Int
 	var createdDate: NSDate
@@ -18,7 +19,8 @@ class Habit {
 	var notifications: Bool
 	var tasks: [Task]?
 	
-	init(name: String,
+	init(id: String = NSUUID().UUIDString,
+	     name: String,
 	     stage: Int = 1,
 	     createdDate: NSDate = NSDate(),
 	     twitterAccountId: String?,
@@ -27,6 +29,7 @@ class Habit {
 	     notifications: Bool,
 	     tasks: [Task]?) {
 		
+		self.id = id
 		self.name = name
 		self.stage = stage
 		self.createdDate = createdDate

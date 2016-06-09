@@ -56,18 +56,16 @@ class NewHabitViewController: UIViewController {
 	@IBAction func startNewHabitButtonTapped(sender: AnyObject) {
 		HUD.sharedInstance.showWithText("Setting up " + newHabitNameTextField.text!)
 		
+		performSegueWithIdentifier("toMainSegue", sender: self)
+		
 		let newHabit = Habit(name: newHabitNameTextField.text!,
-		                     twitterAccountId: twitterAccountId, 
+		                     twitterAccountId: twitterAccountId,
 		                     useTo_dayData: useTo_dayDataSwitch.on,
 		                     useWorkHData: useWorkHDataSwitch.on,
 		                     notifications: false,
 		                     tasks: nil)
 		
-		CKHandler.sharedInstance.newHabit(newHabit) { success in
-			if success {
-				// Present the next View Controller
-			}
-		}
+		CKHandler.sharedInstance.newHabit(newHabit)
 	}
 	
 	@IBAction func linkTwitterAccountSwitchValueChanged(sender: UISwitch) {

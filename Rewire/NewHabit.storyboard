@@ -252,11 +252,20 @@
                         <outlet property="startNewHabitButton" destination="zY3-g0-l3e" id="18I-GE-MbL"/>
                         <outlet property="useTo_dayDataSwitch" destination="khv-fy-fM0" id="qL0-9k-bjz"/>
                         <outlet property="useWorkHDataSwitch" destination="wRa-1y-mhu" id="6tJ-mB-OS9"/>
+                        <segue destination="ccU-KJ-q0H" kind="modal" identifier="toMainSegue" id="fTM-KF-ykt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hSh-nJ-SAs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="170" y="370"/>
+        </scene>
+        <!--Main-->
+        <scene sceneID="f7U-Cr-ag4">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Main" id="ccU-KJ-q0H" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Nd4-lM-Skf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="466.5" y="372"/>
         </scene>
     </scenes>
 </document>
