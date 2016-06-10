@@ -25,12 +25,6 @@ class MainViewController: UIViewController {
 		}
 	}
 	
-	override func viewDidAppear(animated: Bool) {
-		super.viewDidAppear(animated)
-		
-		HUD.sharedInstance.showWithText("Loading Progress...")
-	}
-	
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		

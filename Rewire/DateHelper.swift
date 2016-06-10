@@ -44,5 +44,5 @@ func hoursFromDates(sessions: [Session]) -> Double {
 	                                              toDate: NSDate(timeIntervalSinceReferenceDate: totalElapsedTime),
 	                                              options: [])
 	
-	return Double(dateCompoenentsFromTotalElapsedTime.hour)
+	return Double(abs(dateCompoenentsFromTotalElapsedTime.hour))
 }

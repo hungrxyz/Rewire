@@ -43,20 +43,19 @@ class CKTo_dayDataHandler: CKTo_dayDataHandlerProtocol {
 		                    predicate: NSPredicate(format: "createdDate > %f", today5AM().timeIntervalSinceReferenceDate))
 		
 		privateDatabase.performQuery(query, inZoneWithID: nil) { records, error in
+			var completedTasksCount = 0
+			
 			if let records = records {
-				var completedTasksCount = 0
-				
 				for record in records {
 					if (record["completed"] as! Bool) {
 						completedTasksCount += 1
 					}
 				}
-				
-				completedCount(completedTasksCount)
 			} else if let error = error {
 				print(error)
-				completedCount(0)
 			}
+			
+			completedCount(completedTasksCount)
 		}
 	}
 }

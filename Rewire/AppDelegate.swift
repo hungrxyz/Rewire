@@ -16,16 +16,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 	func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
 		
-		if let currentHabitRecordID = NSUserDefaults.standardUserDefaults().valueForKey("currentHabitRecordID") as? String {
-			CKHandler.sharedInstance.fetchHabitRecord(currentHabitRecordID)
-		} else {
-			let storyboard = UIStoryboard(name: "NewHabit", bundle: nil)
-			if let newHabitViewController = storyboard.instantiateInitialViewController() as? NewHabitViewController {
-				window?.rootViewController = newHabitViewController
-				window?.makeKeyAndVisible()
-			}
-		}
-		
 		return true
 	}
 
@@ -44,7 +34,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 	}
 
 	func applicationDidBecomeActive(application: UIApplication) {
-		// Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+		
+		if let currentHabitRecordID = NSUserDefaults.standardUserDefaults().valueForKey("currentHabitRecordID") as? String {
+			HUD.sharedInstance.showWithText("Loading...")
+			
+			CKHandler.sharedInstance.fetchHabitRecord(currentHabitRecordID)
+		} else {
+			let storyboard = UIStoryboard(name: "NewHabit", bundle: nil)
+			if let newHabitViewController = storyboard.instantiateInitialViewController() as? NewHabitViewController {
+				window?.rootViewController = newHabitViewController
+				window?.makeKeyAndVisible()
+			}
+		}
 	}
 
 	func applicationWillTerminate(application: UIApplication) {

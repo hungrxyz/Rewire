@@ -165,4 +165,8 @@ class CKHandler {
 			}
 		}
 	}
+	
+	func updateDay(day: Day) {
+		
+	}
 }
