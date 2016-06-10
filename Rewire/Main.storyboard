@@ -86,7 +86,7 @@
                                                 </label>
                                             </subviews>
                                         </stackView>
-                                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="9Q7-iz-gUr">
+                                        <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="9Q7-iz-gUr">
                                             <rect key="frame" x="0.0" y="193" width="320" height="375"/>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             <view key="tableFooterView" contentMode="scaleToFill" id="7PA-1d-8Qy">

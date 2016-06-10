@@ -10,12 +10,12 @@ import Foundation
 
 let calendar = NSCalendar.currentCalendar()
 
-func today5AM() -> Double {
-	let today = calendar.dateByAddingUnit(.Hour, value: -5, toDate: NSDate(), options: [])
-	let todayStartOfDay = calendar.startOfDayForDate(today!)
-	let today5AM = calendar.dateByAddingUnit(.Hour, value: 5, toDate: todayStartOfDay, options: [])
+func today5AM() -> NSDate {
+	let today = calendar.dateByAddingUnit(.Hour, value: -5, toDate: NSDate(), options: [])!
+	let todayStartOfDay = calendar.startOfDayForDate(today)
+	let today5AM =  calendar.dateByAddingUnit(.Hour, value: 5, toDate: todayStartOfDay, options: [])!
 	
-	return today5AM!.timeIntervalSinceReferenceDate
+	return today5AM
 }
 
 /// Calcualtes and returns the right day number for today
@@ -30,4 +30,19 @@ func dayNumberFromDate(date: NSDate) -> Int {
 	let differenceToNowComponents = calendar.components([.Day], fromDate: modifiedCreatedDate, toDate: NSDate(), options: [])
 	
 	return differenceToNowComponents.day + 1
+}
+
+func hoursFromDates(sessions: [Session]) -> Double {
+	var totalElapsedTime = 0.0
+	
+	for session in sessions {
+		totalElapsedTime += session.startDate.timeIntervalSinceDate(session.endDate)
+	}
+	
+	let dateCompoenentsFromTotalElapsedTime = calendar.components([.Hour],
+	                                              fromDate: NSDate(timeIntervalSinceReferenceDate: 0.0),
+	                                              toDate: NSDate(timeIntervalSinceReferenceDate: totalElapsedTime),
+	                                              options: [])
+	
+	return Double(dateCompoenentsFromTotalElapsedTime.hour)
 }

@@ -37,4 +37,26 @@ class CKTo_dayDataHandler: CKTo_dayDataHandlerProtocol {
 		
 		privateDatabase.addOperation(queryOperation)
 	}
+	
+	func fetchTodaysTasks(completedCount: Int -> ()) {
+		let query = CKQuery(recordType: "Tasks",
+		                    predicate: NSPredicate(format: "createdDate > %f", today5AM().timeIntervalSinceReferenceDate))
+		
+		privateDatabase.performQuery(query, inZoneWithID: nil) { records, error in
+			if let records = records {
+				var completedTasksCount = 0
+				
+				for record in records {
+					if (record["completed"] as! Bool) {
+						completedTasksCount += 1
+					}
+				}
+				
+				completedCount(completedTasksCount)
+			} else if let error = error {
+				print(error)
+				completedCount(0)
+			}
+		}
+	}
 }

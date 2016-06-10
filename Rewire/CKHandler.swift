@@ -126,19 +126,25 @@ class CKHandler {
 		privateDatabase.performQuery(query, inZoneWithID: nil) { records, error in
 			if let records = records {
 				if let record = records.first {
-					let day = Day(id: record.recordID.recordName,
-					              habit: self.habit,
-					              number: record["number"] as! Int,
-					              date: record["date"] as! NSDate,
-					              to_dayDataGoal: record["to_dayDataGoal"] as! Int,
-					              to_dayData: record["to_dayData"] as! Int,
-					              workHDataGoal: record["workHDataGoal"] as! Double,
-					              workHData: record["workHData"] as! Double,
-					              tasks: nil)
-					
-					dispatch_async(dispatch_get_main_queue()) {
-						if let delegate = self.delegate {
-							delegate.day(day)
+					CKTo_dayDataHandler.sharedInstance.fetchTodaysTasks() { completedTasksCount in
+						CKWorkHDataHandler.sharedInstance.fetchTodaysSessions() { hours in
+							
+							let day = Day(id: record.recordID.recordName,
+								habit: self.habit,
+								number: record["number"] as! Int,
+								date: record["date"] as! NSDate,
+								to_dayDataGoal: record["to_dayDataGoal"] as! Int,
+								to_dayData: completedTasksCount,
+								workHDataGoal: record["workHDataGoal"] as! Double,
+								workHData: hours,
+								tasks: nil)
+							
+							
+							dispatch_async(dispatch_get_main_queue()) {
+								if let delegate = self.delegate {
+									delegate.day(day)
+								}
+							}
 						}
 					}
 				} else {
@@ -152,6 +158,7 @@ class CKHandler {
 					
 					self.newDay(newDay, habitRecordID: CKRecordID(recordName: self.habit.id))
 				}
+						
 				
 			} else if let error = error {
 				print(error)

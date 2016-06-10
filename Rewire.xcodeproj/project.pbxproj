@@ -20,6 +20,7 @@
 		FA52C18C1D08A93E007C4000 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA52C18B1D08A93E007C4000 /* MainViewController.swift */; };
 		FA52C18E1D09706F007C4000 /* DateHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA52C18D1D09706F007C4000 /* DateHelper.swift */; };
 		FA52C1911D098320007C4000 /* MainCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA52C1901D098320007C4000 /* MainCell.swift */; };
+		FA52C1931D09E205007C4000 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA52C1921D09E205007C4000 /* Session.swift */; };
 		FA6C11FE1D086E29002E2516 /* CKHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6C11FD1D086E29002E2516 /* CKHandler.swift */; };
 		FA6C12021D086E65002E2516 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA6C12011D086E65002E2516 /* CloudKit.framework */; };
 		FA6C12041D0870DC002E2516 /* CKHandlerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6C12031D0870DC002E2516 /* CKHandlerTests.swift */; };
@@ -63,6 +64,7 @@
 		FA52C18B1D08A93E007C4000 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		FA52C18D1D09706F007C4000 /* DateHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateHelper.swift; sourceTree = "<group>"; };
 		FA52C1901D098320007C4000 /* MainCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainCell.swift; sourceTree = "<group>"; };
+		FA52C1921D09E205007C4000 /* Session.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
 		FA6C11FD1D086E29002E2516 /* CKHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CKHandler.swift; sourceTree = "<group>"; };
 		FA6C12001D086E4D002E2516 /* Rewire.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Rewire.entitlements; sourceTree = "<group>"; };
 		FA6C12011D086E65002E2516 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
@@ -206,6 +208,7 @@
 				FA31DBFA1D024688007410D3 /* Habit.swift */,
 				FA31DBFE1D024C70007410D3 /* Day.swift */,
 				FA31DBFC1D02479B007410D3 /* Task.swift */,
+				FA52C1921D09E205007C4000 /* Session.swift */,
 			);
 			name = "Data Models";
 			sourceTree = "<group>";
@@ -470,6 +473,7 @@
 				FA1929EC1CFC6B8500728B36 /* TwitterHandler.swift in Sources */,
 				FA52C18C1D08A93E007C4000 /* MainViewController.swift in Sources */,
 				FA31DBFF1D024C70007410D3 /* Day.swift in Sources */,
+				FA52C1931D09E205007C4000 /* Session.swift in Sources */,
 				FA192A111CFDFC8C00728B36 /* TwitterAPI.swift in Sources */,
 				FA6C11FE1D086E29002E2516 /* CKHandler.swift in Sources */,
 				FA9530931CF8F40D00BA6771 /* NewHabitViewController.swift in Sources */,

@@ -38,4 +38,27 @@ class CKWorkHDataHandler: CKWorkHDataHandlerProtocol {
 		
 		privateDatabase.addOperation(queryOperation)
 	}
+	
+	func fetchTodaysSessions(hours: Double -> ()) {
+		let query = CKQuery(recordType: "Session", predicate: NSPredicate(format: "startDate > %@", today5AM()))
+		
+		privateDatabase.performQuery(query, inZoneWithID: nil) { records, error in
+			if let records = records {
+				
+				var sessions: [Session] = []
+				
+				for record in records {
+					if let endDate = record["endDate"] as? NSDate {
+						let session = Session(startDate: record["startDate"] as! NSDate, endDate: endDate)
+						sessions.append(session)
+					}
+				}
+				
+				hours(hoursFromDates(sessions))
+			} else if let error = error {
+				print(error)
+				hours(0.0)
+			}
+		}
+	}
 }
