@@ -9,7 +9,7 @@
 import UIKit
 import MBProgressHUD
 
-class NewHabitViewController: UIViewController {
+class NewHabitViewController: UIViewController, TwitterAccountIDConstructable {
 	
 	@IBOutlet weak var newHabitNameLabel: UILabel!
 	@IBOutlet weak var newHabitNameTextField: UITextField!
@@ -22,17 +22,13 @@ class NewHabitViewController: UIViewController {
 	@IBOutlet weak var customTextFieldAbbr: UITextField!
 	@IBOutlet weak var scrollView: UIScrollView!
 	
-	var twitterHandler: TwitterHandler!
-	
-	var twitterAccountId: String?
+	var twitterAccountID: TwitterAccountID?
 	
 	var keyboardShown = false
 	var lastActiveTextField: UITextField?
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		
-		twitterHandler = TwitterHandler()
 		
 		view.backgroundColor = UIColor(patternImage: UIImage(named: "AppIcon60x60")!)
 		
@@ -59,7 +55,7 @@ class NewHabitViewController: UIViewController {
 		performSegueWithIdentifier("toMainSegue", sender: self)
 		
 		let newHabit = Habit(name: newHabitNameTextField.text!,
-		                     twitterAccountId: twitterAccountId,
+		                     twitterAccountId: twitterAccountID?.id,
 		                     useTo_dayData: useTo_dayDataSwitch.on,
 		                     useWorkHData: useWorkHDataSwitch.on,
 		                     notifications: false,
@@ -70,14 +66,13 @@ class NewHabitViewController: UIViewController {
 	
 	@IBAction func linkTwitterAccountSwitchValueChanged(sender: UISwitch) {
 		if sender.on {
-			twitterHandler.setup { accountId in
-				self.twitterAccountId = accountId
-				if accountId == nil {
-					dispatch_async(dispatch_get_main_queue()) {
-						sender.on = false
-					}
+			getTwitterAccountID { twitterAccountID in
+				if let twitterAccountID = twitterAccountID {
+					self.twitterAccountID = twitterAccountID
 				}
 			}
+		} else {
+			twitterAccountID = nil
 		}
 	}
 	

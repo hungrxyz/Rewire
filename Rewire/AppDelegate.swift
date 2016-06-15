@@ -35,17 +35,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 	func applicationDidBecomeActive(application: UIApplication) {
 		
-		if let currentHabitRecordID = NSUserDefaults.standardUserDefaults().valueForKey("currentHabitRecordID") as? String {
-			HUD.sharedInstance.showWithText("Loading...")
-			
-			CKHandler.sharedInstance.fetchHabitRecord(currentHabitRecordID)
-		} else {
+//		if let currentHabitRecordID = NSUserDefaults.standardUserDefaults().valueForKey("currentHabitRecordID") as? String {
+//			HUD.sharedInstance.showWithText("Loading...")
+//			
+//			CKHandler.sharedInstance.fetchHabitRecord(currentHabitRecordID)
+//		} else {
 			let storyboard = UIStoryboard(name: "NewHabit", bundle: nil)
 			if let newHabitViewController = storyboard.instantiateInitialViewController() as? NewHabitViewController {
 				window?.rootViewController = newHabitViewController
 				window?.makeKeyAndVisible()
 			}
-		}
+//		}
 	}
 
 	func applicationWillTerminate(application: UIApplication) {
