@@ -39,13 +39,23 @@ class NewHabitViewControllerTests: XCTestCase {
 	}
 		
 	func test_linkTwitterAccountSwitch_requestsAccess() {
-		let mockAPI = MockTwitterAPI()
-		newHabitViewController.twitterHandler = TwitterHandler(api: mockAPI)
+		class MockTwitterAccountConstructor: TwitterAccountConstructor {
+			var getTwitterAccountIDWasCalled = false
+			
+			override func getTwitterAccountID(twitterAccountID: TwitterAccountID? -> ()) {
+				self.getTwitterAccountIDWasCalled = true
+				
+				twitterAccountID(nil)
+			}
+		}
 		
+		let mockTwitterAccountConstructor = MockTwitterAccountConstructor()
+	
+		newHabitViewController.twitterAccountConstructor = mockTwitterAccountConstructor
 		newHabitViewController.linkTwitterAccountSwitch.on = true
 		newHabitViewController.linkTwitterAccountSwitchValueChanged(newHabitViewController.linkTwitterAccountSwitch)
 		
-		XCTAssertTrue(mockAPI.accessChecked, "Access for Twitter account has not been requested")
+		XCTAssertTrue(mockTwitterAccountConstructor.getTwitterAccountIDWasCalled, "Access for Twitter account has not been requested")
 	}
 	
 	private func textFieldTextDidChange() {

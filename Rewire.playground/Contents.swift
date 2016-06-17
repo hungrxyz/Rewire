@@ -74,4 +74,12 @@ TwitterAccountID()
 
 
 
+protocol Testis {
+	func test()
+}
+
+extension Testis where Self: UIView {
+	
+}
+
 

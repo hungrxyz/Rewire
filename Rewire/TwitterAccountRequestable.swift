@@ -9,9 +9,9 @@
 import Foundation
 import Accounts
 
-protocol TwitterAccountRequest: TwitterAccountAccessRequest, TwitterAccountsSheetRenderer { }
+protocol TwitterAccountRequestable: TwitterAccountAccessRequestable, TwitterAccountsSheetRenderer { }
 
-extension TwitterAccountRequest {
+extension TwitterAccountRequestable {
 	func requestAccount(account: ACAccount? -> ()) {
 		requestAccess { granted in
 			if granted {

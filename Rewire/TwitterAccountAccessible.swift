@@ -1,21 +1,20 @@
 //
-//  TwitterAccountsAccess.swift
+//  TwitterAccountAccessible.swift
 //  Rewire
 //
-//  Created by Zel Marko on 6/15/16.
+//  Created by Zel Marko on 6/17/16.
 //  Copyright © 2016 Zel Marko. All rights reserved.
 //
 
 import Foundation
 import Accounts
 
-/// Holds the account store and account type for Twitter
-protocol TwitterAccountAccess {
+protocol TwitterAccountAccessible {
 	var accountStore: ACAccountStore { get }
 	var accountType: ACAccountType { get }
 }
 
-extension TwitterAccountAccess {
+extension TwitterAccountAccessible {
 	var accountStore: ACAccountStore {
 		return ACAccountStore()
 	}

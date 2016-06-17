@@ -9,9 +9,9 @@
 import Foundation
 import Accounts
 
-protocol TwitterAccountAccessRequest: TwitterAccountAccess { }
+protocol TwitterAccountAccessRequestable: TwitterAccountAccessible { }
 
-extension TwitterAccountAccessRequest {
+extension TwitterAccountAccessRequestable {
 	func requestAccess(granted: Bool -> ()) {
 		accountStore.requestAccessToAccountsWithType(accountType, options: nil) { success, error in
 			if error != nil {

@@ -1,5 +1,5 @@
 //
-//  TwitterAccountIDConstructable.swift
+//  TwitterAccountsAccess.swift
 //  Rewire
 //
 //  Created by Zel Marko on 6/15/16.
@@ -9,9 +9,8 @@
 import Foundation
 import Accounts
 
-protocol TwitterAccountIDConstructable: TwitterAccountRequest { }
-
-extension TwitterAccountIDConstructable {
+/// Access point for receiving a Twitter account ID
+class TwitterAccountConstructor: TwitterAccountRequestable, TwitterAccountConstructable {
 	func getTwitterAccountID(twitterAccountID: TwitterAccountID? -> ()) {
 		requestAccount { account in
 			if let account = account {

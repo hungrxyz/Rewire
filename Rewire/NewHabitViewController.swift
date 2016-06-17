@@ -9,7 +9,7 @@
 import UIKit
 import MBProgressHUD
 
-class NewHabitViewController: UIViewController, TwitterAccountIDConstructable {
+class NewHabitViewController: UIViewController {
 	
 	@IBOutlet weak var newHabitNameLabel: UILabel!
 	@IBOutlet weak var newHabitNameTextField: UITextField!
@@ -22,6 +22,7 @@ class NewHabitViewController: UIViewController, TwitterAccountIDConstructable {
 	@IBOutlet weak var customTextFieldAbbr: UITextField!
 	@IBOutlet weak var scrollView: UIScrollView!
 	
+	var twitterAccountConstructor: TwitterAccountConstructable!
 	var twitterAccountID: TwitterAccountID?
 	
 	var keyboardShown = false
@@ -29,6 +30,8 @@ class NewHabitViewController: UIViewController, TwitterAccountIDConstructable {
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
+		
+		twitterAccountConstructor = TwitterAccountConstructor()
 		
 		view.backgroundColor = UIColor(patternImage: UIImage(named: "AppIcon60x60")!)
 		
@@ -66,7 +69,7 @@ class NewHabitViewController: UIViewController, TwitterAccountIDConstructable {
 	
 	@IBAction func linkTwitterAccountSwitchValueChanged(sender: UISwitch) {
 		if sender.on {
-			getTwitterAccountID { twitterAccountID in
+			twitterAccountConstructor.getTwitterAccountID { twitterAccountID in
 				if let twitterAccountID = twitterAccountID {
 					self.twitterAccountID = twitterAccountID
 				}
