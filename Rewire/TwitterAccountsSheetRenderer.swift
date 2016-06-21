@@ -6,32 +6,11 @@
 //  Copyright © 2016 Zel Marko. All rights reserved.
 //
 
-import UIKit
-import Accounts
+import Foundation
 
-protocol TwitterAccountsSheetRenderer { }
-
-extension TwitterAccountsSheetRenderer {
-	/// Presents Alert Sheet with all Twitter accounts that are available
-	func presentAlertSheetWithAccounts(accounts: [ACAccount], selectedAccount: ACAccount? -> ()) {
-		let alertSheet = UIAlertController(title: "Select Twitter Account", message: nil, preferredStyle: .ActionSheet)
-		
-		for account in accounts {
-			let action = UIAlertAction(title: account.username, style: .Default) { action in
-				selectedAccount(account)
-			}
-			alertSheet.addAction(action)
-		}
-		
-		alertSheet.addAction(UIAlertAction(title: "Cancel", style: .Cancel) { action in
-			selectedAccount(nil)
-		})
-		
-		if let newHabitViewController = UIApplication.sharedApplication().keyWindow?.rootViewController as? NewHabitViewController {
-			dispatch_async(dispatch_get_main_queue()) {
-				newHabitViewController.presentViewController(alertSheet, animated: true, completion: nil)
-			}
-		}
-
-	}
+protocol TwitterAccountsSheetRenderer {
+	associatedtype A
+	
+	/// Creates and presents `UIAlertViewController` with available `ACAccount`s.
+	func presentAlertSheet(withAccounts accounts: [A], completion: Result<A> -> ())
 }

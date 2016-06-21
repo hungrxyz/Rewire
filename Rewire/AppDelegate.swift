@@ -40,11 +40,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //			
 //			CKHandler.sharedInstance.fetchHabitRecord(currentHabitRecordID)
 //		} else {
-			let storyboard = UIStoryboard(name: "NewHabit", bundle: nil)
-			if let newHabitViewController = storyboard.instantiateInitialViewController() as? NewHabitViewController {
-				window?.rootViewController = newHabitViewController
-				window?.makeKeyAndVisible()
-			}
+//			let storyboard = UIStoryboard(name: "NewHabit", bundle: nil)
+//			if let newHabitViewController = storyboard.instantiateInitialViewController() as? NewHabitViewController {
+//				window?.rootViewController = newHabitViewController
+//				window?.makeKeyAndVisible()
+//			}
 //		}
 	}
 

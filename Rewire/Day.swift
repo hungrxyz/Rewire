@@ -8,9 +8,9 @@
 
 import Foundation
 
-class Day {
+struct Day {
 	let id: String
-	let habit: Habit
+	let rewiring: Rewiring
 	let number: Int
 	let date: NSDate
 	let to_dayDataGoal: Int
@@ -20,7 +20,7 @@ class Day {
 	var tasks: [Task]?
 	
 	init(id: String = NSUUID().UUIDString,
-	     habit: Habit,
+	     rewiring: Rewiring,
 	     number: Int = 1,
 	     date: NSDate = NSDate(),
 	     to_dayDataGoal: Int,
@@ -30,7 +30,7 @@ class Day {
 	     tasks: [Task]?) {
 		
 		self.id = id
-		self.habit = habit
+		self.rewiring = rewiring
 		self.number = number
 		self.date = date
 		self.to_dayDataGoal = to_dayDataGoal

@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'D050B54BCA040C11F3A3A50CA6EAA7D5'
-               BlueprintName = 'Pods-Rewire'
+               BlueprintIdentifier = 'CF8E8DE62CFA6449514883243FBA01D3'
+               BlueprintName = 'B68UIFloatLabelTextField'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'Pods-Rewire.framework'>
+               BuildableName = 'B68UIFloatLabelTextField.framework'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

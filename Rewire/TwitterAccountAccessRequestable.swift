@@ -7,17 +7,7 @@
 //
 
 import Foundation
-import Accounts
 
-protocol TwitterAccountAccessRequestable: TwitterAccountAccessible { }
-
-extension TwitterAccountAccessRequestable {
-	func requestAccess(granted: Bool -> ()) {
-		accountStore.requestAccessToAccountsWithType(accountType, options: nil) { success, error in
-			if error != nil {
-				print(error)
-			}
-			granted(success)
-		}
-	}
+protocol TwitterAccountAccessRequestable {
+	func requestAccess(granted: Bool -> ())
 }

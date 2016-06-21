@@ -1,12 +1,15 @@
 PODS:
+  - B68UIFloatLabelTextField (0.1.2)
   - MBProgressHUD (0.9.2)
 
 DEPENDENCIES:
+  - B68UIFloatLabelTextField
   - MBProgressHUD
 
 SPEC CHECKSUMS:
+  B68UIFloatLabelTextField: 337894ff837df84e19636c99f3f5f88c4fad60d7
   MBProgressHUD: 1569cf7ace17a8bac47aabfbb8580a49690386d1
 
-PODFILE CHECKSUM: 79e8fb188ea36f3e61081cad00d2ada6aeaec766
+PODFILE CHECKSUM: f51cbfdbd08cce3d296c06a7f7c186a6cabf829e
 
 COCOAPODS: 1.0.0.rc.1

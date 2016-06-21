@@ -9,7 +9,9 @@
 /* Begin PBXBuildFile section */
 		9F347DB05D9CC6CA8030C76F /* Pods_RewireTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 838E07881E826B170FCCD7A7 /* Pods_RewireTests.framework */; };
 		C8AC23E7D69CAF15B5DDE074 /* Pods_Rewire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B41C5F6ED5362284218E63DE /* Pods_Rewire.framework */; };
-		FA31DBFB1D024688007410D3 /* Habit.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA31DBFA1D024688007410D3 /* Habit.swift */; };
+		FA20B7071D19C396000B2E43 /* TwitterAccountConstructorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA20B7061D19C396000B2E43 /* TwitterAccountConstructorTests.swift */; };
+		FA20B70B1D19D319000B2E43 /* TwitterAccountIDConstructable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA20B70A1D19D319000B2E43 /* TwitterAccountIDConstructable.swift */; };
+		FA31DBFB1D024688007410D3 /* Rewiring.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA31DBFA1D024688007410D3 /* Rewiring.swift */; };
 		FA31DBFD1D02479B007410D3 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA31DBFC1D02479B007410D3 /* Task.swift */; };
 		FA31DBFF1D024C70007410D3 /* Day.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA31DBFE1D024C70007410D3 /* Day.swift */; };
 		FA52C1871D0881C4007C4000 /* CKWorkHDataHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA52C1861D0881C4007C4000 /* CKWorkHDataHandler.swift */; };
@@ -17,7 +19,7 @@
 		FA52C18C1D08A93E007C4000 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA52C18B1D08A93E007C4000 /* MainViewController.swift */; };
 		FA52C18E1D09706F007C4000 /* DateHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA52C18D1D09706F007C4000 /* DateHelper.swift */; };
 		FA52C1911D098320007C4000 /* MainCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA52C1901D098320007C4000 /* MainCell.swift */; };
-		FA52C1931D09E205007C4000 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA52C1921D09E205007C4000 /* Session.swift */; };
+		FA52C1931D09E205007C4000 /* WorkHSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA52C1921D09E205007C4000 /* WorkHSession.swift */; };
 		FA6C11FE1D086E29002E2516 /* CKHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6C11FD1D086E29002E2516 /* CKHandler.swift */; };
 		FA6C12021D086E65002E2516 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA6C12011D086E65002E2516 /* CloudKit.framework */; };
 		FA6C12061D087793002E2516 /* CKTo-dayDataHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6C12051D087793002E2516 /* CKTo-dayDataHandler.swift */; };
@@ -25,9 +27,12 @@
 		FA9382D21CFB7AD600F6357D /* NewHabitViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9382D11CFB7AD600F6357D /* NewHabitViewControllerTests.swift */; };
 		FA9382D41CFB7B6E00F6357D /* NewHabit.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA9382D31CFB7B6E00F6357D /* NewHabit.storyboard */; };
 		FA9530931CF8F40D00BA6771 /* NewHabitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9530921CF8F40D00BA6771 /* NewHabitViewController.swift */; };
+		FA995E271D184A0700350CC7 /* NewRewiringViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA995E261D184A0700350CC7 /* NewRewiringViewController.swift */; };
+		FA995E291D184A1500350CC7 /* NewRewiring.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA995E281D184A1500350CC7 /* NewRewiring.storyboard */; };
+		FA995E2B1D18A48700350CC7 /* NewRewiringViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA995E2A1D18A48700350CC7 /* NewRewiringViewControllerTests.swift */; };
+		FA995E2D1D18A58F00350CC7 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA995E2C1D18A58F00350CC7 /* Result.swift */; };
+		FA995E2F1D18A72600350CC7 /* TwitterError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA995E2E1D18A72600350CC7 /* TwitterError.swift */; };
 		FAA1C0851D11F8BB00CCA201 /* TwitterAccountsSheetRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA1C0841D11F8BB00CCA201 /* TwitterAccountsSheetRenderer.swift */; };
-		FAA1C0871D13809400CCA201 /* TwitterAccountAccessible.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA1C0861D13809400CCA201 /* TwitterAccountAccessible.swift */; };
-		FAA1C0891D1389A600CCA201 /* TwitterAccountConstructable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA1C0881D1389A600CCA201 /* TwitterAccountConstructable.swift */; };
 		FABAF28A1D11EA78008A5CFD /* TwitterAccountConstructor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABAF2891D11EA77008A5CFD /* TwitterAccountConstructor.swift */; };
 		FABAF28C1D11EB66008A5CFD /* TwitterAccountAccessRequestable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABAF28B1D11EB66008A5CFD /* TwitterAccountAccessRequestable.swift */; };
 		FABAF28E1D11ECF2008A5CFD /* TwitterAccountRequestable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABAF28D1D11ECF2008A5CFD /* TwitterAccountRequestable.swift */; };
@@ -54,9 +59,11 @@
 		B41C5F6ED5362284218E63DE /* Pods_Rewire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Rewire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAB46FD09DE61874350DFF8B /* Pods-Rewire.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rewire.release.xcconfig"; path = "Pods/Target Support Files/Pods-Rewire/Pods-Rewire.release.xcconfig"; sourceTree = "<group>"; };
 		D1258A4F5E61D2C2A4A1B490 /* Pods-RewireTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RewireTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RewireTests/Pods-RewireTests.debug.xcconfig"; sourceTree = "<group>"; };
+		FA20B7061D19C396000B2E43 /* TwitterAccountConstructorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitterAccountConstructorTests.swift; sourceTree = "<group>"; };
+		FA20B70A1D19D319000B2E43 /* TwitterAccountIDConstructable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitterAccountIDConstructable.swift; sourceTree = "<group>"; };
 		FA2FE42E1CF6881100324B00 /* RewireTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RewireTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA2FE4321CF6881100324B00 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FA31DBFA1D024688007410D3 /* Habit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Habit.swift; sourceTree = "<group>"; };
+		FA31DBFA1D024688007410D3 /* Rewiring.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Rewiring.swift; sourceTree = "<group>"; };
 		FA31DBFC1D02479B007410D3 /* Task.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		FA31DBFE1D024C70007410D3 /* Day.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Day.swift; sourceTree = "<group>"; };
 		FA52C1861D0881C4007C4000 /* CKWorkHDataHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CKWorkHDataHandler.swift; sourceTree = "<group>"; };
@@ -64,7 +71,7 @@
 		FA52C18B1D08A93E007C4000 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		FA52C18D1D09706F007C4000 /* DateHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateHelper.swift; sourceTree = "<group>"; };
 		FA52C1901D098320007C4000 /* MainCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainCell.swift; sourceTree = "<group>"; };
-		FA52C1921D09E205007C4000 /* Session.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
+		FA52C1921D09E205007C4000 /* WorkHSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkHSession.swift; sourceTree = "<group>"; };
 		FA6C11FD1D086E29002E2516 /* CKHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CKHandler.swift; sourceTree = "<group>"; };
 		FA6C12001D086E4D002E2516 /* Rewire.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Rewire.entitlements; sourceTree = "<group>"; };
 		FA6C12011D086E65002E2516 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
@@ -74,9 +81,12 @@
 		FA9382D31CFB7B6E00F6357D /* NewHabit.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = NewHabit.storyboard; sourceTree = "<group>"; };
 		FA9382DA1CFBBC2C00F6357D /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = "Pods/../build/Debug-iphoneos/RealmSwift/RealmSwift.framework"; sourceTree = "<group>"; };
 		FA9530921CF8F40D00BA6771 /* NewHabitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewHabitViewController.swift; sourceTree = "<group>"; };
+		FA995E261D184A0700350CC7 /* NewRewiringViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewRewiringViewController.swift; sourceTree = "<group>"; };
+		FA995E281D184A1500350CC7 /* NewRewiring.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = NewRewiring.storyboard; sourceTree = "<group>"; };
+		FA995E2A1D18A48700350CC7 /* NewRewiringViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewRewiringViewControllerTests.swift; sourceTree = "<group>"; };
+		FA995E2C1D18A58F00350CC7 /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		FA995E2E1D18A72600350CC7 /* TwitterError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitterError.swift; sourceTree = "<group>"; };
 		FAA1C0841D11F8BB00CCA201 /* TwitterAccountsSheetRenderer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitterAccountsSheetRenderer.swift; sourceTree = "<group>"; };
-		FAA1C0861D13809400CCA201 /* TwitterAccountAccessible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitterAccountAccessible.swift; sourceTree = "<group>"; };
-		FAA1C0881D1389A600CCA201 /* TwitterAccountConstructable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitterAccountConstructable.swift; sourceTree = "<group>"; };
 		FABAF2891D11EA77008A5CFD /* TwitterAccountConstructor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitterAccountConstructor.swift; sourceTree = "<group>"; };
 		FABAF28B1D11EB66008A5CFD /* TwitterAccountAccessRequestable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitterAccountAccessRequestable.swift; sourceTree = "<group>"; };
 		FABAF28D1D11ECF2008A5CFD /* TwitterAccountRequestable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitterAccountRequestable.swift; sourceTree = "<group>"; };
@@ -136,19 +146,37 @@
 			children = (
 				FABAF2911D11EFAD008A5CFD /* TwitterAccountID.swift */,
 				FABAF2891D11EA77008A5CFD /* TwitterAccountConstructor.swift */,
-				FAA1C0881D1389A600CCA201 /* TwitterAccountConstructable.swift */,
-				FAA1C0861D13809400CCA201 /* TwitterAccountAccessible.swift */,
+				FA20B70A1D19D319000B2E43 /* TwitterAccountIDConstructable.swift */,
 				FABAF28B1D11EB66008A5CFD /* TwitterAccountAccessRequestable.swift */,
 				FABAF28D1D11ECF2008A5CFD /* TwitterAccountRequestable.swift */,
 				FAA1C0841D11F8BB00CCA201 /* TwitterAccountsSheetRenderer.swift */,
+				FA995E2E1D18A72600350CC7 /* TwitterError.swift */,
 			);
 			name = Twitter;
+			sourceTree = "<group>";
+		};
+		FA20B7081D19C39B000B2E43 /* Twitter Tests */ = {
+			isa = PBXGroup;
+			children = (
+				FA20B7061D19C396000B2E43 /* TwitterAccountConstructorTests.swift */,
+			);
+			name = "Twitter Tests";
+			sourceTree = "<group>";
+		};
+		FA20B7091D19C3AE000B2E43 /* View Controller Tests */ = {
+			isa = PBXGroup;
+			children = (
+				FA995E2A1D18A48700350CC7 /* NewRewiringViewControllerTests.swift */,
+				FA9382D11CFB7AD600F6357D /* NewHabitViewControllerTests.swift */,
+			);
+			name = "View Controller Tests";
 			sourceTree = "<group>";
 		};
 		FA2FE42F1CF6881100324B00 /* RewireTests */ = {
 			isa = PBXGroup;
 			children = (
-				FA9382D11CFB7AD600F6357D /* NewHabitViewControllerTests.swift */,
+				FA20B7091D19C3AE000B2E43 /* View Controller Tests */,
+				FA20B7081D19C39B000B2E43 /* Twitter Tests */,
 				FA2FE4321CF6881100324B00 /* Info.plist */,
 			);
 			path = RewireTests;
@@ -168,6 +196,7 @@
 			isa = PBXGroup;
 			children = (
 				FA52C18D1D09706F007C4000 /* DateHelper.swift */,
+				FA995E2C1D18A58F00350CC7 /* Result.swift */,
 			);
 			name = Helpers;
 			sourceTree = "<group>";
@@ -214,12 +243,21 @@
 		FA9382DF1CFC287000F6357D /* Data Models */ = {
 			isa = PBXGroup;
 			children = (
-				FA31DBFA1D024688007410D3 /* Habit.swift */,
+				FA31DBFA1D024688007410D3 /* Rewiring.swift */,
 				FA31DBFE1D024C70007410D3 /* Day.swift */,
 				FA31DBFC1D02479B007410D3 /* Task.swift */,
-				FA52C1921D09E205007C4000 /* Session.swift */,
+				FA52C1921D09E205007C4000 /* WorkHSession.swift */,
 			);
 			name = "Data Models";
+			sourceTree = "<group>";
+		};
+		FA995E251D1849DF00350CC7 /* New Rewiring */ = {
+			isa = PBXGroup;
+			children = (
+				FA995E281D184A1500350CC7 /* NewRewiring.storyboard */,
+				FA995E261D184A0700350CC7 /* NewRewiringViewController.swift */,
+			);
+			name = "New Rewiring";
 			sourceTree = "<group>";
 		};
 		FAE28ED81CA2017800E88D38 = {
@@ -246,6 +284,7 @@
 			isa = PBXGroup;
 			children = (
 				FA9382D61CFB7C8F00F6357D /* Underground */,
+				FA995E251D1849DF00350CC7 /* New Rewiring */,
 				FA9382D51CFB7C8700F6357D /* New Habit */,
 				FA52C18A1D08A923007C4000 /* Main */,
 				FA6C11FF1D086E2E002E2516 /* Cloud Kit */,
@@ -361,6 +400,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA9382D41CFB7B6E00F6357D /* NewHabit.storyboard in Resources */,
+				FA995E291D184A1500350CC7 /* NewRewiring.storyboard in Resources */,
 				FAE28EF21CA2017800E88D38 /* LaunchScreen.storyboard in Resources */,
 				FAE28EEF1CA2017800E88D38 /* Assets.xcassets in Resources */,
 				FA52C1891D08A91C007C4000 /* Main.storyboard in Resources */,
@@ -467,7 +507,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA995E2B1D18A48700350CC7 /* NewRewiringViewControllerTests.swift in Sources */,
 				FA9382D21CFB7AD600F6357D /* NewHabitViewControllerTests.swift in Sources */,
+				FA20B7071D19C396000B2E43 /* TwitterAccountConstructorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -475,18 +517,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FA31DBFB1D024688007410D3 /* Habit.swift in Sources */,
+				FA31DBFB1D024688007410D3 /* Rewiring.swift in Sources */,
 				FA52C1871D0881C4007C4000 /* CKWorkHDataHandler.swift in Sources */,
+				FA995E271D184A0700350CC7 /* NewRewiringViewController.swift in Sources */,
 				FABAF2921D11EFAD008A5CFD /* TwitterAccountID.swift in Sources */,
 				FA52C18C1D08A93E007C4000 /* MainViewController.swift in Sources */,
 				FA31DBFF1D024C70007410D3 /* Day.swift in Sources */,
-				FA52C1931D09E205007C4000 /* Session.swift in Sources */,
+				FA20B70B1D19D319000B2E43 /* TwitterAccountIDConstructable.swift in Sources */,
+				FA52C1931D09E205007C4000 /* WorkHSession.swift in Sources */,
 				FABAF28E1D11ECF2008A5CFD /* TwitterAccountRequestable.swift in Sources */,
-				FAA1C0871D13809400CCA201 /* TwitterAccountAccessible.swift in Sources */,
+				FA995E2F1D18A72600350CC7 /* TwitterError.swift in Sources */,
 				FA6C11FE1D086E29002E2516 /* CKHandler.swift in Sources */,
+				FA995E2D1D18A58F00350CC7 /* Result.swift in Sources */,
 				FA9530931CF8F40D00BA6771 /* NewHabitViewController.swift in Sources */,
 				FABAF28C1D11EB66008A5CFD /* TwitterAccountAccessRequestable.swift in Sources */,
-				FAA1C0891D1389A600CCA201 /* TwitterAccountConstructable.swift in Sources */,
 				FA52C1911D098320007C4000 /* MainCell.swift in Sources */,
 				FAA1C0851D11F8BB00CCA201 /* TwitterAccountsSheetRenderer.swift in Sources */,
 				FA52C18E1D09706F007C4000 /* DateHelper.swift in Sources */,

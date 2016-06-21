@@ -22,7 +22,7 @@ class NewHabitViewController: UIViewController {
 	@IBOutlet weak var customTextFieldAbbr: UITextField!
 	@IBOutlet weak var scrollView: UIScrollView!
 	
-	var twitterAccountConstructor: TwitterAccountConstructable!
+//	var twitterAccountConstructor: TwitterAccountConstructable!
 	var twitterAccountID: TwitterAccountID?
 	
 	var keyboardShown = false
@@ -31,7 +31,7 @@ class NewHabitViewController: UIViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
-		twitterAccountConstructor = TwitterAccountConstructor()
+//		twitterAccountConstructor = TwitterAccountConstructor()
 		
 		view.backgroundColor = UIColor(patternImage: UIImage(named: "AppIcon60x60")!)
 		
@@ -52,46 +52,46 @@ class NewHabitViewController: UIViewController {
 		view.addGestureRecognizer(tapGestureRecognizer)
 	}
 	
-	@IBAction func startNewHabitButtonTapped(sender: AnyObject) {
-		HUD.sharedInstance.showWithText("Setting up " + newHabitNameTextField.text!)
-		
-		performSegueWithIdentifier("toMainSegue", sender: self)
-		
-		let newHabit = Habit(name: newHabitNameTextField.text!,
-		                     twitterAccountId: twitterAccountID?.id,
-		                     useTo_dayData: useTo_dayDataSwitch.on,
-		                     useWorkHData: useWorkHDataSwitch.on,
-		                     notifications: false,
-		                     tasks: nil)
-		
-		CKHandler.sharedInstance.newHabit(newHabit)
-	}
+//	@IBAction func startNewHabitButtonTapped(sender: AnyObject) {
+//		HUD.sharedInstance.showWithText("Setting up " + newHabitNameTextField.text!)
+//		
+//		performSegueWithIdentifier("toMainSegue", sender: self)
+//		
+//		let newHabit = Habit(name: newHabitNameTextField.text!,
+//		                     twitterAccountId: twitterAccountID?.id,
+//		                     useTo_dayData: useTo_dayDataSwitch.on,
+//		                     useWorkHData: useWorkHDataSwitch.on,
+//		                     notifications: false,
+//		                     tasks: nil)
+//		
+//		CKHandler.sharedInstance.newHabit(newHabit)
+//	}
+//	
+//	@IBAction func linkTwitterAccountSwitchValueChanged(sender: UISwitch) {
+//		if sender.on {
+//			twitterAccountConstructor.getTwitterAccountID { twitterAccountID in
+//				if let twitterAccountID = twitterAccountID {
+//					self.twitterAccountID = twitterAccountID
+//				}
+//			}
+//		} else {
+//			twitterAccountID = nil
+//		}
+//	}
 	
-	@IBAction func linkTwitterAccountSwitchValueChanged(sender: UISwitch) {
-		if sender.on {
-			twitterAccountConstructor.getTwitterAccountID { twitterAccountID in
-				if let twitterAccountID = twitterAccountID {
-					self.twitterAccountID = twitterAccountID
-				}
-			}
-		} else {
-			twitterAccountID = nil
-		}
-	}
-	
-	@IBAction func useTo_dayDataSwitchValueChanged(sender: UISwitch) {
-		if sender.on {
-			HUD.sharedInstance.showWithText("Setting up To-day data")
-			CKTo_dayDataHandler.sharedInstance.checkExistingTo_dayData()
-		}
-	}
-	
-	@IBAction func useWorkHDataSwitchValueChanged(sender: UISwitch) {
-		if sender.on {
-			HUD.sharedInstance.showWithText("Setting up WorkH data")
-			CKWorkHDataHandler.sharedInstance.checkExistingWorkHData()			
-		}
-	}
+//	@IBAction func useTo_dayDataSwitchValueChanged(sender: UISwitch) {
+//		if sender.on {
+//			HUD.sharedInstance.showWithText("Setting up To-day data")
+//			CKTo_dayDataHandler.sharedInstance.checkExistingTo_dayData()
+//		}
+//	}
+//	
+//	@IBAction func useWorkHDataSwitchValueChanged(sender: UISwitch) {
+//		if sender.on {
+//			HUD.sharedInstance.showWithText("Setting up WorkH data")
+//			CKWorkHDataHandler.sharedInstance.checkExistingWorkHData()
+//		}
+//	}
 	
 	@IBAction func notificationsSwitchValueChanged(sender: UISwitch) {
 		

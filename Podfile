@@ -6,6 +6,7 @@ use_frameworks!
 target 'Rewire' do
 
 pod 'MBProgressHUD'
+pod 'B68UIFloatLabelTextField'
 
 end
 

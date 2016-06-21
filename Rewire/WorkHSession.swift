@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Session {
+struct WorkHSession {
 	
 	let startDate: NSDate
 	let endDate: NSDate

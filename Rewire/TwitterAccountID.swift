@@ -8,6 +8,10 @@
 
 import Foundation
 
-struct TwitterAccountID {
+struct TwitterAccountID: Equatable {
 	var id: String
+}
+
+func ==(lhs: TwitterAccountID, rhs: TwitterAccountID) -> Bool {
+	return lhs.id == rhs.id
 }

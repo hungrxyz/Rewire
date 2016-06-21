@@ -6,13 +6,13 @@
 //  Copyright © 2016 Zel Marko. All rights reserved.
 //
 
-import UIKit
+import Foundation
 
-class Habit {
-	var id: String
+struct Rewiring {
+	let id: String
 	var name: String
 	var stage: Int
-	var createdDate: NSDate
+	let startDate: NSDate
 	var twitterAccountId: String?
 	var useTo_dayData: Bool
 	var useWorkHData: Bool
@@ -22,7 +22,7 @@ class Habit {
 	init(id: String = NSUUID().UUIDString,
 	     name: String,
 	     stage: Int = 1,
-	     createdDate: NSDate = NSDate(),
+	     startDate: NSDate = NSDate(),
 	     twitterAccountId: String?,
 	     useTo_dayData: Bool,
 	     useWorkHData: Bool,
@@ -32,7 +32,7 @@ class Habit {
 		self.id = id
 		self.name = name
 		self.stage = stage
-		self.createdDate = createdDate
+		self.startDate = startDate
 		self.twitterAccountId = twitterAccountId
 		self.useTo_dayData = useTo_dayData
 		self.useWorkHData = useWorkHData
