@@ -144,12 +144,12 @@
 		FA192A0B1CFCF16E00728B36 /* Twitter */ = {
 			isa = PBXGroup;
 			children = (
-				FABAF2911D11EFAD008A5CFD /* TwitterAccountID.swift */,
 				FABAF2891D11EA77008A5CFD /* TwitterAccountConstructor.swift */,
 				FA20B70A1D19D319000B2E43 /* TwitterAccountIDConstructable.swift */,
 				FABAF28B1D11EB66008A5CFD /* TwitterAccountAccessRequestable.swift */,
 				FABAF28D1D11ECF2008A5CFD /* TwitterAccountRequestable.swift */,
 				FAA1C0841D11F8BB00CCA201 /* TwitterAccountsSheetRenderer.swift */,
+				FABAF2911D11EFAD008A5CFD /* TwitterAccountID.swift */,
 				FA995E2E1D18A72600350CC7 /* TwitterError.swift */,
 			);
 			name = Twitter;

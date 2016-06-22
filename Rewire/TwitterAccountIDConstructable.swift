@@ -8,6 +8,22 @@
 
 import Foundation
 
-protocol TwitterAccountIDConstructable {
+protocol TwitterAccountIDConstructable: TwitterAccountRequestable {
 	func get(twitterAccountID: TwitterAccountID? -> ())
+}
+
+extension TwitterAccountIDConstructable {
+	func get(twitterAccountID: TwitterAccountID? -> ()) {
+		requestAccount { result in
+			if let result = result {
+				switch result {
+				case .success(let identifier):
+					twitterAccountID(TwitterAccountID(id: identifier))
+				case .failure(let error):
+					// MARK: Need alert to present the error
+					print(error)
+				}
+			}
+		}
+	}
 }
