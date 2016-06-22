@@ -14,6 +14,11 @@
 			<key>orderHint</key>
 			<integer>5</integer>
 		</dict>
+		<key>PKHUD.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>7</integer>
+		</dict>
 		<key>Pods-Rewire.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -62,6 +67,11 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>77E58E45F2C01B8BAD81203CF3ED5C65</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>7F16EE16721F5245EE32659F2E076CB5</key>
 		<dict>
 			<key>primary</key>
@@ -82,6 +92,11 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>BCD48FF2C6065D803070EE0F68F9E4D0</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>CF8E8DE62CFA6449514883243FBA01D3</key>
 		<dict>
 			<key>primary</key>
@@ -98,6 +113,11 @@
 			<true/>
 		</dict>
 		<key>E61CE3B6DFA1FE6B3E296965C76C0E10</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F6F0516F82D07656D12F1C0716898F73</key>
 		<dict>
 			<key>primary</key>
 			<true/>

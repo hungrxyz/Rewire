@@ -7,7 +7,15 @@
 //
 
 enum TwitterError: ErrorType {
-	case deniedPermission
+	case noAccess
 	case noAccounts
 	case cancelled
+	
+	var name: String? {
+		switch self {
+		case .noAccess: return "No Access!"
+		case .noAccounts: return "No Accounts!"
+		case .cancelled: return nil
+		}
+	}
 }

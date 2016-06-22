@@ -42,7 +42,7 @@ extension TwitterAccountRequestable {
 					}
 				}
 			} else {
-				completion(Result.failure(TwitterError.deniedPermission))
+				completion(Result.failure(TwitterError.noAccess))
 				print("No Access")
 			}
 		}

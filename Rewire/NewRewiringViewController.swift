@@ -23,7 +23,6 @@ class NewRewiringViewController: UIViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
-		
 	}
 	
 	@IBAction func useTo_dayDataSwitchValueChanged(sender: AnyObject) {
