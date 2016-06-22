@@ -25,6 +25,7 @@
 		FA6C11FE1D086E29002E2516 /* CKHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6C11FD1D086E29002E2516 /* CKHandler.swift */; };
 		FA6C12021D086E65002E2516 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA6C12011D086E65002E2516 /* CloudKit.framework */; };
 		FA6C12061D087793002E2516 /* CKTo-dayDataHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6C12051D087793002E2516 /* CKTo-dayDataHandler.swift */; };
+		FA6F0ACC1D1B3F0700244D38 /* TwitterAccountRequestableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6F0ACB1D1B3F0700244D38 /* TwitterAccountRequestableTests.swift */; };
 		FA75FF371D1A9DBF008D1957 /* HUDType.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA75FF361D1A9DBF008D1957 /* HUDType.swift */; };
 		FA75FF391D1A9E0F008D1957 /* Hidable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA75FF381D1A9E0F008D1957 /* Hidable.swift */; };
 		FA9382D41CFB7B6E00F6357D /* NewHabit.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA9382D31CFB7B6E00F6357D /* NewHabit.storyboard */; };
@@ -80,6 +81,7 @@
 		FA6C12001D086E4D002E2516 /* Rewire.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Rewire.entitlements; sourceTree = "<group>"; };
 		FA6C12011D086E65002E2516 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		FA6C12051D087793002E2516 /* CKTo-dayDataHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CKTo-dayDataHandler.swift"; sourceTree = "<group>"; };
+		FA6F0ACB1D1B3F0700244D38 /* TwitterAccountRequestableTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitterAccountRequestableTests.swift; sourceTree = "<group>"; };
 		FA75FF361D1A9DBF008D1957 /* HUDType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HUDType.swift; sourceTree = "<group>"; };
 		FA75FF381D1A9E0F008D1957 /* Hidable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Hidable.swift; sourceTree = "<group>"; };
 		FA9382D31CFB7B6E00F6357D /* NewHabit.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = NewHabit.storyboard; sourceTree = "<group>"; };
@@ -150,8 +152,8 @@
 			children = (
 				FABAF2891D11EA77008A5CFD /* TwitterAccountConstructor.swift */,
 				FA20B70A1D19D319000B2E43 /* TwitterAccountIDConstructable.swift */,
-				FABAF28B1D11EB66008A5CFD /* TwitterAccountAccessRequestable.swift */,
 				FABAF28D1D11ECF2008A5CFD /* TwitterAccountRequestable.swift */,
+				FABAF28B1D11EB66008A5CFD /* TwitterAccountAccessRequestable.swift */,
 				FAA1C0841D11F8BB00CCA201 /* TwitterAccountsSheetRenderer.swift */,
 				FABAF2911D11EFAD008A5CFD /* TwitterAccountID.swift */,
 				FA995E2E1D18A72600350CC7 /* TwitterError.swift */,
@@ -163,6 +165,7 @@
 			isa = PBXGroup;
 			children = (
 				FA20B7061D19C396000B2E43 /* TwitterAccountIDConstructableTests.swift */,
+				FA6F0ACB1D1B3F0700244D38 /* TwitterAccountRequestableTests.swift */,
 			);
 			name = "Twitter Tests";
 			sourceTree = "<group>";
@@ -513,6 +516,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA6F0ACC1D1B3F0700244D38 /* TwitterAccountRequestableTests.swift in Sources */,
 				FA995E2B1D18A48700350CC7 /* NewRewiringViewControllerTests.swift in Sources */,
 				FA20B7071D19C396000B2E43 /* TwitterAccountIDConstructableTests.swift in Sources */,
 			);
